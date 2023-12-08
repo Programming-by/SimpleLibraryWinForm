@@ -1,0 +1,15 @@
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\bin\Debug\SimpleLibraryWinForm.exe.config
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\bin\Debug\SimpleLibraryWinForm.exe
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\bin\Debug\SimpleLibraryWinForm.pdb
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\bin\Debug\SimpleLibraryBusinessLayer.dll
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\bin\Debug\SimpleLibraryDataAccess.dll
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\bin\Debug\SimpleLibraryBusinessLayer.pdb
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\bin\Debug\SimpleLibraryDataAccess.pdb
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Properties.Resources.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.csproj.CopyComplete
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.exe
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.pdb
