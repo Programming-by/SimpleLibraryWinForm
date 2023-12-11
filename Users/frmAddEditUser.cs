@@ -67,7 +67,6 @@ namespace SimpleLibraryWinForm.Users
             {
                 MessageBox.Show("Data Saved Successfully");
                 lblUserID.Text = _User.UserID.ToString();
-                frmAddEditUser_Load(null, null);    
             } else
             {
                 MessageBox.Show("User Failed To Save");
@@ -82,6 +81,39 @@ namespace SimpleLibraryWinForm.Users
             {
                 btnSave.PerformClick();
             }
+        }
+
+        private void txtName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtName, "Name cannot be empty");
+            } else
+                errorProvider1.SetError(txtName, "");
+
+        }
+
+        private void txtContactInformation_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtContactInformation.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtContactInformation, "Contact Information cannot be empty");
+            }
+            else
+                errorProvider1.SetError(txtContactInformation, "");
+        }
+
+        private void txtLibraryCardNumber_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtLibraryCardNumber.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtLibraryCardNumber, "Library Card Number cannot be empty");
+            }
+            else
+                errorProvider1.SetError(txtLibraryCardNumber, "");
         }
     }
 }

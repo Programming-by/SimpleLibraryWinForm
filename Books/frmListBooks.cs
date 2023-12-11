@@ -102,5 +102,47 @@ namespace SimpleLibraryWinForm.Books
                 _dtBooks.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilter.Text.Trim());
             lblRecordsCount.Text = dgvBooks.Rows.Count.ToString();
         }
+
+        private void btnAddNewBook_Click(object sender, EventArgs e)
+        {
+            frmAddEditBook frm = new frmAddEditBook();
+            frm.ShowDialog();
+            frmBooks_Load(null,null);
+        }
+
+        private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditBook frm = new frmAddEditBook();
+            frm.ShowDialog();
+            frmBooks_Load(null, null);
+        }
+
+        private void addNewBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditBook frm = new frmAddEditBook();
+            frm.ShowDialog();
+            frmBooks_Load(null, null);
+        }
+
+        private void editBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditBook frm = new frmAddEditBook((int)dgvBooks.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmBooks_Load(null, null);
+        }
+        private void deleteBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete this book?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                return;
+
+            int UserID = (int)dgvBooks.CurrentRow.Cells[0].Value;
+            if (clsUsers.DeleteUsers(UserID))
+            {
+                MessageBox.Show("Book Deleted Successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmBooks_Load(null, null);
+            }
+            else
+                MessageBox.Show("Book Failed to Delete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

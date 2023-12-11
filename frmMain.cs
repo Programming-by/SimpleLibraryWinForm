@@ -29,6 +29,7 @@ namespace SimpleLibraryWinForm
         {
             frmListBooks frm = new frmListBooks();
             frm.ShowDialog();
+            
         }
     }
 }

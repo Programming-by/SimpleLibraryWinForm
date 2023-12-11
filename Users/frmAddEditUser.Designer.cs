@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.txtLibraryCardNumber = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -68,6 +71,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(168, 27);
             this.txtName.TabIndex = 3;
+            this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.txtName_Validating);
             // 
             // label3
             // 
@@ -86,6 +90,7 @@
             this.txtContactInformation.Name = "txtContactInformation";
             this.txtContactInformation.Size = new System.Drawing.Size(168, 27);
             this.txtContactInformation.TabIndex = 5;
+            this.txtContactInformation.Validating += new System.ComponentModel.CancelEventHandler(this.txtContactInformation_Validating);
             // 
             // label4
             // 
@@ -135,6 +140,7 @@
             this.txtLibraryCardNumber.Size = new System.Drawing.Size(168, 27);
             this.txtLibraryCardNumber.TabIndex = 10;
             this.txtLibraryCardNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLibraryCardNumber_KeyPress);
+            this.txtLibraryCardNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtLibraryCardNumber_Validating);
             // 
             // btnSave
             // 
@@ -145,6 +151,10 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddEditUser
             // 
@@ -165,6 +175,7 @@
             this.Name = "frmAddEditUser";
             this.Text = "frmAddNewUser";
             this.Load += new System.EventHandler(this.frmAddEditUser_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +194,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtLibraryCardNumber;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
