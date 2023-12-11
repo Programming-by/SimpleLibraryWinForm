@@ -116,8 +116,16 @@ namespace SimpleLibraryWinForm
 
         private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           //frm.ShowDialog();
-           //frmListUsers_Load(null, null);
+            if (MessageBox.Show("Are you sure you want to delete this user?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                return;
+
+            int UserID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+            if (clsUsers.DeleteUsers(UserID))
+            {
+            MessageBox.Show("User Deleted Successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            frmListUsers_Load(null, null);
+            } else
+                MessageBox.Show("User Failed to Delete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
