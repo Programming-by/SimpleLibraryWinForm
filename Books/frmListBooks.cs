@@ -110,20 +110,12 @@ namespace SimpleLibraryWinForm.Books
             frmBooks_Load(null,null);
         }
 
-        private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAddEditBook frm = new frmAddEditBook();
-            frm.ShowDialog();
-            frmBooks_Load(null, null);
-        }
-
         private void addNewBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddEditBook frm = new frmAddEditBook();
             frm.ShowDialog();
             frmBooks_Load(null, null);
         }
-
         private void editBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddEditBook frm = new frmAddEditBook((int)dgvBooks.CurrentRow.Cells[0].Value);
@@ -135,8 +127,8 @@ namespace SimpleLibraryWinForm.Books
             if (MessageBox.Show("Are you sure you want to delete this book?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
                 return;
 
-            int UserID = (int)dgvBooks.CurrentRow.Cells[0].Value;
-            if (clsUsers.DeleteUsers(UserID))
+            int BookID = (int)dgvBooks.CurrentRow.Cells[0].Value;
+            if (clsBooks.DeleteBooks(BookID))
             {
                 MessageBox.Show("Book Deleted Successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmBooks_Load(null, null);

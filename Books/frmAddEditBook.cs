@@ -47,7 +47,7 @@ namespace SimpleLibraryWinForm.Books
                 _Book = clsBooks.Find(_BookID);
                 if (_Book == null)
                 {
-                    MessageBox.Show("User doesn't Exist");
+                    MessageBox.Show("Book doesn't Exist");
                     return;
                 }
                 txtTitle.Text = _Book.Title;
