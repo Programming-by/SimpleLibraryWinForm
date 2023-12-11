@@ -30,6 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -37,6 +38,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.booksToolStripMenuItem,
             this.usersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -50,6 +52,13 @@
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
+            // 
+            // booksToolStripMenuItem
+            // 
+            this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.booksToolStripMenuItem.Text = "Books";
+            this.booksToolStripMenuItem.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -72,6 +81,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
     }
 }
 

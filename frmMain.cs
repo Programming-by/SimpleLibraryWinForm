@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleLibraryWinForm.Books;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,12 @@ namespace SimpleLibraryWinForm
         {
             frmListUsers frm = new frmListUsers();
 
+            frm.ShowDialog();
+        }
+
+        private void booksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListBooks frm = new frmListBooks();
             frm.ShowDialog();
         }
     }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Books\frmListBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\frmListBooks.Designer.cs">
+      <DependentUpon>frmListBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\frmAddEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Books\frmListBooks.resx">
+      <DependentUpon>frmListBooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
     </EmbeddedResource>
