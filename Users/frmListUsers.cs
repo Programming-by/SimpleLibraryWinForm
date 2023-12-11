@@ -1,4 +1,5 @@
 ﻿using SimpleLibraryBusinessLayer;
+using SimpleLibraryWinForm.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,10 +19,11 @@ namespace SimpleLibraryWinForm
             InitializeComponent();
         }
 
-        private DataTable _dtUsers = clsUsers.GetAllUsers();
+        private DataTable _dtUsers = new DataTable();
         private void frmListUsers_Load(object sender, EventArgs e)
         {
             cbFilters.SelectedIndex = 0;
+            _dtUsers = clsUsers.GetAllUsers();
             dgvUsers.DataSource = _dtUsers;
 
             if (dgvUsers.Rows.Count > 0)
@@ -89,6 +91,38 @@ namespace SimpleLibraryWinForm
                 _dtUsers.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilter.Text.Trim());
             lblRecordsCount.Text = dgvUsers.Rows.Count.ToString();
 
+        }
+
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            frmAddEditUser frm = new frmAddEditUser();
+            frm.ShowDialog();   
+            frmListUsers_Load(null,null);
+        }
+
+        private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditUser frm = new frmAddEditUser();
+            frm.ShowDialog();
+            frmListUsers_Load(null, null);
+        }
+
+        private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditUser frm = new frmAddEditUser((int)dgvUsers.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListUsers_Load(null, null);
+        }
+
+        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           //frm.ShowDialog();
+           //frmListUsers_Load(null, null);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
