@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace SimpleLibraryWinForm
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListUsers frm = new frmListUsers();
+
+            frm.ShowDialog();
         }
     }
 }
