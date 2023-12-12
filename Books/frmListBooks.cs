@@ -136,5 +136,11 @@ namespace SimpleLibraryWinForm.Books
             else
                 MessageBox.Show("Book Failed to Delete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void showBookDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowBookDetails frm = new frmShowBookDetails((int)dgvBooks.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }

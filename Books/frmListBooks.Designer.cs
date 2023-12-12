@@ -41,6 +41,7 @@
             this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.showBookDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -118,11 +119,12 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showBookDetailsToolStripMenuItem,
             this.addNewUserToolStripMenuItem,
             this.editUserToolStripMenuItem,
             this.deleteUserToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(179, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
             // 
             // addNewUserToolStripMenuItem
             // 
@@ -134,14 +136,14 @@
             // editUserToolStripMenuItem
             // 
             this.editUserToolStripMenuItem.Name = "editUserToolStripMenuItem";
-            this.editUserToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.editUserToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.editUserToolStripMenuItem.Text = "Edit Book";
             this.editUserToolStripMenuItem.Click += new System.EventHandler(this.editBookToolStripMenuItem_Click);
             // 
             // deleteUserToolStripMenuItem
             // 
             this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.deleteUserToolStripMenuItem.Text = "Delete Book";
             this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteBookToolStripMenuItem_Click);
             // 
@@ -164,6 +166,13 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // showBookDetailsToolStripMenuItem
+            // 
+            this.showBookDetailsToolStripMenuItem.Name = "showBookDetailsToolStripMenuItem";
+            this.showBookDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.showBookDetailsToolStripMenuItem.Text = "Show Book Details";
+            this.showBookDetailsToolStripMenuItem.Click += new System.EventHandler(this.showBookDetailsToolStripMenuItem_Click);
             // 
             // frmListBooks
             // 
@@ -202,5 +211,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ToolStripMenuItem showBookDetailsToolStripMenuItem;
     }
 }

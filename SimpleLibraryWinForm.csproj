@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookCopies\frmAddEditCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookCopies\frmAddEditCopy.Designer.cs">
+      <DependentUpon>frmAddEditCopy.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookCopies\frmListBookCopies.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookCopies\frmListBookCopies.Designer.cs">
       <DependentUpon>frmListBookCopies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\ctrlBookDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Books\ctrlBookDetails.Designer.cs">
+      <DependentUpon>ctrlBookDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Books\frmAddEditBook.cs">
       <SubType>Form</SubType>
@@ -63,6 +75,12 @@
     </Compile>
     <Compile Include="Books\frmListBooks.Designer.cs">
       <DependentUpon>frmListBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Books\frmShowBookDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\frmShowBookDetails.Designer.cs">
+      <DependentUpon>frmShowBookDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Classes\clsFormat.cs" />
     <Compile Include="Users\frmAddEditUser.cs">
@@ -85,14 +103,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookCopies\frmAddEditCopy.resx">
+      <DependentUpon>frmAddEditCopy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookCopies\frmListBookCopies.resx">
       <DependentUpon>frmListBookCopies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\ctrlBookDetails.resx">
+      <DependentUpon>ctrlBookDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmAddEditBook.resx">
       <DependentUpon>frmAddEditBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmListBooks.resx">
       <DependentUpon>frmListBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\frmShowBookDetails.resx">
+      <DependentUpon>frmShowBookDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
