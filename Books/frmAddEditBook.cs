@@ -104,6 +104,5 @@ namespace SimpleLibraryWinForm.Books
             else
                 errorProvider1.SetError(txtISBN, "");
         }
-
     }
 }

@@ -35,7 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtISBN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.cbGenre = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtISBN = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,15 +105,6 @@
             this.label4.Size = new System.Drawing.Size(82, 25);
             this.label4.TabIndex = 17;
             this.label4.Text = "BookID:";
-            // 
-            // txtISBN
-            // 
-            this.txtISBN.Location = new System.Drawing.Point(260, 196);
-            this.txtISBN.Multiline = true;
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(168, 27);
-            this.txtISBN.TabIndex = 16;
-            this.txtISBN.Validating += new System.ComponentModel.CancelEventHandler(this.txtISBN_Validating);
             // 
             // label3
             // 
@@ -202,11 +193,21 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // txtISBN
+            // 
+            this.txtISBN.Location = new System.Drawing.Point(260, 208);
+            this.txtISBN.Mask = "000-000-000";
+            this.txtISBN.Name = "txtISBN";
+            this.txtISBN.Size = new System.Drawing.Size(168, 22);
+            this.txtISBN.TabIndex = 27;
+            this.txtISBN.Validating += new System.ComponentModel.CancelEventHandler(this.txtISBN_Validating);
+            // 
             // frmAddEditBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 583);
+            this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbGenre);
             this.Controls.Add(this.label1);
@@ -217,7 +218,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblUserID);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label2);
@@ -239,7 +239,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label label2;
@@ -249,5 +248,6 @@
         private System.Windows.Forms.ComboBox cbGenre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.MaskedTextBox txtISBN;
     }
 }

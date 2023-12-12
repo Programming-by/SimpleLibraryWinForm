@@ -1,4 +1,5 @@
-﻿using SimpleLibraryWinForm.Books;
+﻿using SimpleLibraryWinForm.BookCopies;
+using SimpleLibraryWinForm.Books;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,11 +26,16 @@ namespace SimpleLibraryWinForm
             frm.ShowDialog();
         }
 
-        private void booksToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ManageBooksStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmListBooks frm = new frmListBooks();
             frm.ShowDialog();
-            
+        }
+
+        private void BookCopiesStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmListBookCopies frm = new frmListBookCopies();
+            frm.ShowDialog();
         }
     }
 }

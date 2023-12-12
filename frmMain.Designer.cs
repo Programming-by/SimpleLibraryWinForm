@@ -28,50 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msMainMenue = new System.Windows.Forms.MenuStrip();
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.ManageBooksStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.BookCopiesStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.finesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrowingRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.msMainMenue.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // msMainMenue
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msMainMenue.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.msMainMenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.booksToolStripMenuItem,
             this.usersToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // usersToolStripMenuItem
-            // 
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.usersToolStripMenuItem.Text = "Users";
-            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
+            this.msMainMenue.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.msMainMenue.Location = new System.Drawing.Point(0, 0);
+            this.msMainMenue.Name = "msMainMenue";
+            this.msMainMenue.Size = new System.Drawing.Size(800, 36);
+            this.msMainMenue.TabIndex = 0;
+            this.msMainMenue.Text = "msMainMenue";
             // 
             // booksToolStripMenuItem
             // 
+            this.booksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ManageBooksStripMenuItem1,
+            this.toolStripSeparator1,
+            this.BookCopiesStripMenuItem1,
+            this.toolStripSeparator2,
+            this.reservationsToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.borrowingRecordsToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.finesToolStripMenuItem});
+            this.booksToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
             this.booksToolStripMenuItem.Text = "Books";
-            this.booksToolStripMenuItem.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
+            // 
+            // ManageBooksStripMenuItem1
+            // 
+            this.ManageBooksStripMenuItem1.Name = "ManageBooksStripMenuItem1";
+            this.ManageBooksStripMenuItem1.Size = new System.Drawing.Size(227, 32);
+            this.ManageBooksStripMenuItem1.Text = "Manage Books";
+            this.ManageBooksStripMenuItem1.Click += new System.EventHandler(this.ManageBooksStripMenuItem1_Click);
+            // 
+            // BookCopiesStripMenuItem1
+            // 
+            this.BookCopiesStripMenuItem1.Name = "BookCopiesStripMenuItem1";
+            this.BookCopiesStripMenuItem1.Size = new System.Drawing.Size(263, 32);
+            this.BookCopiesStripMenuItem1.Text = "Book Copies";
+            this.BookCopiesStripMenuItem1.Click += new System.EventHandler(this.BookCopiesStripMenuItem1_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(224, 6);
+            // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
+            this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
+            // 
+            // reservationsToolStripMenuItem
+            // 
+            this.reservationsToolStripMenuItem.Name = "reservationsToolStripMenuItem";
+            this.reservationsToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
+            this.reservationsToolStripMenuItem.Text = "Reservations";
+            // 
+            // finesToolStripMenuItem
+            // 
+            this.finesToolStripMenuItem.Name = "finesToolStripMenuItem";
+            this.finesToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
+            this.finesToolStripMenuItem.Text = "Fines";
+            // 
+            // borrowingRecordsToolStripMenuItem
+            // 
+            this.borrowingRecordsToolStripMenuItem.Name = "borrowingRecordsToolStripMenuItem";
+            this.borrowingRecordsToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
+            this.borrowingRecordsToolStripMenuItem.Text = "Borrowing Records";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(260, 6);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(260, 6);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(260, 6);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.msMainMenue);
+            this.MainMenuStrip = this.msMainMenue;
             this.Name = "frmMain";
             this.Text = "Main Form";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.msMainMenue.ResumeLayout(false);
+            this.msMainMenue.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,9 +153,18 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip msMainMenue;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BookCopiesStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem ManageBooksStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem reservationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem borrowingRecordsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem finesToolStripMenuItem;
     }
 }
 

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookCopies\frmListBookCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookCopies\frmListBookCopies.Designer.cs">
+      <DependentUpon>frmListBookCopies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Books\frmAddEditBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookCopies\frmListBookCopies.resx">
+      <DependentUpon>frmListBookCopies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Books\frmAddEditBook.resx">
       <DependentUpon>frmAddEditBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,13 +105,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,6 +125,21 @@
       <Project>{ab02def1-4331-444d-b304-8d2cd3eed210}</Project>
       <Name>SimpleLibraryBusinessLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
