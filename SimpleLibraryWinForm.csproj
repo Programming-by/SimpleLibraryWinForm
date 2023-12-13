@@ -64,6 +64,12 @@
     <Compile Include="Books\ctrlBookDetails.Designer.cs">
       <DependentUpon>ctrlBookDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Books\ctrlBookDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Books\ctrlBookDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlBookDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Books\frmAddEditBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Books\ctrlBookDetails.resx">
       <DependentUpon>ctrlBookDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\ctrlBookDetailsWithFilter.resx">
+      <DependentUpon>ctrlBookDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmAddEditBook.resx">
       <DependentUpon>frmAddEditBook.cs</DependentUpon>

@@ -114,6 +114,7 @@
             this.dgvBooks.RowTemplate.Height = 24;
             this.dgvBooks.Size = new System.Drawing.Size(1005, 275);
             this.dgvBooks.TabIndex = 12;
+            this.dgvBooks.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellDoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -124,7 +125,7 @@
             this.editUserToolStripMenuItem,
             this.deleteUserToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 100);
             // 
             // addNewUserToolStripMenuItem
             // 

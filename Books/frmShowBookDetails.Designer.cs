@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.ctrlBookDetails1 = new SimpleLibraryWinForm.Books.ctrlBookDetails();
             this.btnClose = new System.Windows.Forms.Button();
+            this.ctrlBookDetails1 = new SimpleLibraryWinForm.Books.ctrlBookDetails();
             this.SuspendLayout();
             // 
             // label1
@@ -43,13 +43,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Book Details";
             // 
-            // ctrlBookDetails1
-            // 
-            this.ctrlBookDetails1.Location = new System.Drawing.Point(12, 85);
-            this.ctrlBookDetails1.Name = "ctrlBookDetails1";
-            this.ctrlBookDetails1.Size = new System.Drawing.Size(659, 251);
-            this.ctrlBookDetails1.TabIndex = 13;
-            // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(596, 342);
@@ -60,11 +53,18 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // ctrlBookDetails1
+            // 
+            this.ctrlBookDetails1.Location = new System.Drawing.Point(12, 85);
+            this.ctrlBookDetails1.Name = "ctrlBookDetails1";
+            this.ctrlBookDetails1.Size = new System.Drawing.Size(659, 251);
+            this.ctrlBookDetails1.TabIndex = 13;
+            // 
             // frmShowBookDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 417);
+            this.ClientSize = new System.Drawing.Size(691, 409);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlBookDetails1);
             this.Controls.Add(this.label1);

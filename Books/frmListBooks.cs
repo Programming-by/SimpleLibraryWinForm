@@ -142,5 +142,11 @@ namespace SimpleLibraryWinForm.Books
             frmShowBookDetails frm = new frmShowBookDetails((int)dgvBooks.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void dgvBooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShowBookDetails frm = new frmShowBookDetails((int)dgvBooks.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }

@@ -22,3 +22,4 @@ C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.B
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.BookCopies.frmAddEditCopy.resources
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Books.ctrlBookDetails.resources
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Books.frmShowBookDetails.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Books.ctrlBookDetailsWithFilter.resources

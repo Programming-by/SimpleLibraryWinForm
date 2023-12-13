@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.lblUserID = new System.Windows.Forms.Label();
+            this.lblCopyID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -39,46 +39,51 @@
             this.rbAvailable = new System.Windows.Forms.RadioButton();
             this.rbNotAvailable = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbBookInfo = new System.Windows.Forms.TabPage();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.ctrlBookDetailsWithFilter1 = new SimpleLibraryWinForm.Books.ctrlBookDetailsWithFilter();
+            this.tbCopyInfo = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tbBookInfo.SuspendLayout();
+            this.tbCopyInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(691, 525);
+            this.btnSave.Location = new System.Drawing.Point(794, 479);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 54);
             this.btnSave.TabIndex = 37;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(12, 525);
+            this.btnClose.Location = new System.Drawing.Point(510, 479);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 54);
             this.btnClose.TabIndex = 35;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lblUserID
+            // lblCopyID
             // 
-            this.lblUserID.AutoSize = true;
-            this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(198, 28);
-            this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(45, 25);
-            this.lblUserID.TabIndex = 33;
-            this.lblUserID.Text = "???";
+            this.lblCopyID.AutoSize = true;
+            this.lblCopyID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCopyID.Location = new System.Drawing.Point(306, 136);
+            this.lblCopyID.Name = "lblCopyID";
+            this.lblCopyID.Size = new System.Drawing.Size(45, 25);
+            this.lblCopyID.TabIndex = 33;
+            this.lblCopyID.Text = "???";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 28);
+            this.label4.Location = new System.Drawing.Point(108, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 25);
             this.label4.TabIndex = 32;
@@ -88,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 162);
+            this.label2.Location = new System.Drawing.Point(108, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 25);
             this.label2.TabIndex = 29;
@@ -111,7 +116,7 @@
             // rbAvailable
             // 
             this.rbAvailable.AutoSize = true;
-            this.rbAvailable.Location = new System.Drawing.Point(235, 162);
+            this.rbAvailable.Location = new System.Drawing.Point(311, 229);
             this.rbAvailable.Name = "rbAvailable";
             this.rbAvailable.Size = new System.Drawing.Size(85, 20);
             this.rbAvailable.TabIndex = 38;
@@ -122,7 +127,7 @@
             // rbNotAvailable
             // 
             this.rbNotAvailable.AutoSize = true;
-            this.rbNotAvailable.Location = new System.Drawing.Point(311, 136);
+            this.rbNotAvailable.Location = new System.Drawing.Point(445, 229);
             this.rbNotAvailable.Name = "rbNotAvailable";
             this.rbNotAvailable.Size = new System.Drawing.Size(109, 20);
             this.rbNotAvailable.TabIndex = 39;
@@ -132,38 +137,59 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tbBookInfo);
+            this.tabControl1.Controls.Add(this.tbCopyInfo);
             this.tabControl1.Location = new System.Drawing.Point(27, 73);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(873, 400);
             this.tabControl1.TabIndex = 40;
             // 
-            // tabPage1
+            // tbBookInfo
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(865, 371);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Book Info";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tbBookInfo.Controls.Add(this.btnNext);
+            this.tbBookInfo.Controls.Add(this.ctrlBookDetailsWithFilter1);
+            this.tbBookInfo.Location = new System.Drawing.Point(4, 25);
+            this.tbBookInfo.Name = "tbBookInfo";
+            this.tbBookInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tbBookInfo.Size = new System.Drawing.Size(865, 371);
+            this.tbBookInfo.TabIndex = 0;
+            this.tbBookInfo.Text = "Book Info";
+            this.tbBookInfo.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // btnNext
             // 
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.rbNotAvailable);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.rbAvailable);
-            this.tabPage2.Controls.Add(this.lblUserID);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(865, 261);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Copy Info";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.btnNext.Location = new System.Drawing.Point(717, 276);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 54);
+            this.btnNext.TabIndex = 41;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // ctrlBookDetailsWithFilter1
+            // 
+            this.ctrlBookDetailsWithFilter1.FilterEnabled = true;
+            this.ctrlBookDetailsWithFilter1.Location = new System.Drawing.Point(0, 3);
+            this.ctrlBookDetailsWithFilter1.Name = "ctrlBookDetailsWithFilter1";
+            this.ctrlBookDetailsWithFilter1.Size = new System.Drawing.Size(720, 397);
+            this.ctrlBookDetailsWithFilter1.TabIndex = 0;
+            this.ctrlBookDetailsWithFilter1.OnBookSelected += new System.Action<int>(this.ctrlBookDetailsWithFilter1_OnBookSelected);
+            // 
+            // tbCopyInfo
+            // 
+            this.tbCopyInfo.Controls.Add(this.label2);
+            this.tbCopyInfo.Controls.Add(this.rbNotAvailable);
+            this.tbCopyInfo.Controls.Add(this.label4);
+            this.tbCopyInfo.Controls.Add(this.rbAvailable);
+            this.tbCopyInfo.Controls.Add(this.lblCopyID);
+            this.tbCopyInfo.Location = new System.Drawing.Point(4, 25);
+            this.tbCopyInfo.Name = "tbCopyInfo";
+            this.tbCopyInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCopyInfo.Size = new System.Drawing.Size(865, 371);
+            this.tbCopyInfo.TabIndex = 1;
+            this.tbCopyInfo.Text = "Copy Info";
+            this.tbCopyInfo.UseVisualStyleBackColor = true;
             // 
             // frmAddEditCopy
             // 
@@ -176,10 +202,13 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "frmAddEditCopy";
             this.Text = "frmAddEditCopy";
+            this.Activated += new System.EventHandler(this.frmAddEditCopy_Activated);
+            this.Load += new System.EventHandler(this.frmAddEditCopy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tbBookInfo.ResumeLayout(false);
+            this.tbCopyInfo.ResumeLayout(false);
+            this.tbCopyInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,7 +217,7 @@
         #endregion
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label lblUserID;
+        private System.Windows.Forms.Label lblCopyID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitle;
@@ -196,7 +225,9 @@
         private System.Windows.Forms.RadioButton rbNotAvailable;
         private System.Windows.Forms.RadioButton rbAvailable;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbBookInfo;
+        private System.Windows.Forms.TabPage tbCopyInfo;
+        private Books.ctrlBookDetailsWithFilter ctrlBookDetailsWithFilter1;
+        private System.Windows.Forms.Button btnNext;
     }
 }

@@ -134,12 +134,14 @@ namespace SimpleLibraryWinForm.BookCopies
 
         private void btnAddNewBook_Click(object sender, EventArgs e)
         {
-
+            frmAddEditCopy frm = new frmAddEditCopy(-1);
+            frm.ShowDialog();
         }
 
         private void addNewCopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAddEditCopy frm = new frmAddEditCopy(-1);
+            frm.ShowDialog();
         }
 
         private void editCopyToolStripMenuItem_Click(object sender, EventArgs e)

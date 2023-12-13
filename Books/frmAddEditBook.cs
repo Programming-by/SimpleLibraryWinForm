@@ -18,6 +18,10 @@ namespace SimpleLibraryWinForm.Books
         clsBooks _Book;
 
         private int _BookID = -1;
+
+        public delegate void DataBackHandler(object sender, int BookID);
+
+        public event DataBackHandler DataBack;
         public frmAddEditBook()
         {
             InitializeComponent();
@@ -75,6 +79,7 @@ namespace SimpleLibraryWinForm.Books
             {
                 MessageBox.Show("Data Saved Successfully");
                 lblUserID.Text = _Book.BookID.ToString();
+                DataBack?.Invoke(this, _Book.BookID);
             }
             else
             {
