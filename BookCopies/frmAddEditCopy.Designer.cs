@@ -51,6 +51,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Enabled = false;
             this.btnSave.Location = new System.Drawing.Point(794, 479);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 54);
@@ -174,7 +175,6 @@
             this.ctrlBookDetailsWithFilter1.Name = "ctrlBookDetailsWithFilter1";
             this.ctrlBookDetailsWithFilter1.Size = new System.Drawing.Size(720, 397);
             this.ctrlBookDetailsWithFilter1.TabIndex = 0;
-            this.ctrlBookDetailsWithFilter1.OnBookSelected += new System.Action<int>(this.ctrlBookDetailsWithFilter1_OnBookSelected);
             // 
             // tbCopyInfo
             // 

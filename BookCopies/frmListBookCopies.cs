@@ -132,21 +132,24 @@ namespace SimpleLibraryWinForm.BookCopies
             lblRecordsCount.Text = dgvCopies.Rows.Count.ToString();
         }
 
-        private void btnAddNewBook_Click(object sender, EventArgs e)
+        private void btnAddNewCopy_Click(object sender, EventArgs e)
         {
-            frmAddEditCopy frm = new frmAddEditCopy(-1);
+            frmAddEditCopy frm = new frmAddEditCopy();
             frm.ShowDialog();
+            frmListBookCopies_Load(null, null);
         }
-
         private void addNewCopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddEditCopy frm = new frmAddEditCopy(-1);
+            frmAddEditCopy frm = new frmAddEditCopy();
             frm.ShowDialog();
+            frmListBookCopies_Load(null, null);
         }
 
         private void editCopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAddEditCopy frm = new frmAddEditCopy((int)dgvCopies.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListBookCopies_Load(null,null);
         }
 
         private void deleteCopyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,5 +166,6 @@ namespace SimpleLibraryWinForm.BookCopies
             else
                 MessageBox.Show("Copy Failed to Delete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
     }
 }

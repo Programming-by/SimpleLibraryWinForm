@@ -47,6 +47,12 @@ namespace SimpleLibraryWinForm.Books
                 handler(BookID);
         }
         
+        public void LoadBookInfo(int BookID)
+        {
+            cbFilters.SelectedIndex = 0;
+            txtFilterBy.Text = BookID.ToString();
+            FindNow();
+        }
         public void FindNow()
         {
             switch (cbFilters.Text)

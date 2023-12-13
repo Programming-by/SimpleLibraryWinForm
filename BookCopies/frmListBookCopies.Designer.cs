@@ -79,7 +79,7 @@
             this.btnAddNewBook.TabIndex = 23;
             this.btnAddNewBook.Text = "Add";
             this.btnAddNewBook.UseVisualStyleBackColor = true;
-            this.btnAddNewBook.Click += new System.EventHandler(this.btnAddNewBook_Click);
+            this.btnAddNewBook.Click += new System.EventHandler(this.btnAddNewCopy_Click);
             // 
             // lblRecordsCount
             // 
@@ -123,26 +123,26 @@
             this.editCopyToolStripMenuItem,
             this.deleteCopyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(179, 76);
             // 
             // addNewCopyToolStripMenuItem
             // 
             this.addNewCopyToolStripMenuItem.Name = "addNewCopyToolStripMenuItem";
-            this.addNewCopyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewCopyToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
             this.addNewCopyToolStripMenuItem.Text = "Add New Copy";
             this.addNewCopyToolStripMenuItem.Click += new System.EventHandler(this.addNewCopyToolStripMenuItem_Click);
             // 
             // editCopyToolStripMenuItem
             // 
             this.editCopyToolStripMenuItem.Name = "editCopyToolStripMenuItem";
-            this.editCopyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editCopyToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
             this.editCopyToolStripMenuItem.Text = "Edit Copy";
             this.editCopyToolStripMenuItem.Click += new System.EventHandler(this.editCopyToolStripMenuItem_Click);
             // 
             // deleteCopyToolStripMenuItem
             // 
             this.deleteCopyToolStripMenuItem.Name = "deleteCopyToolStripMenuItem";
-            this.deleteCopyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteCopyToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
             this.deleteCopyToolStripMenuItem.Text = "Delete Copy";
             this.deleteCopyToolStripMenuItem.Click += new System.EventHandler(this.deleteCopyToolStripMenuItem_Click);
             // 

@@ -13,54 +13,78 @@ namespace SimpleLibraryWinForm.BookCopies
 {
     public partial class frmAddEditCopy : Form
     {
-        enum enMode { AddNew = 0 , Update = 1 }
+        enum enMode { AddNew = 0, Update = 1 }
         enMode _Mode;
+        int _CopyID = -1;
         int _BookID = -1;
-
         clsCopies _Copy;
-        public frmAddEditCopy(int BookID)
+        public frmAddEditCopy()
+        {
+            InitializeComponent();
+            _Mode = enMode.AddNew;
+        }
+
+        public frmAddEditCopy(int CopyID)
         {
             InitializeComponent();
 
-            _BookID = BookID;
+            _CopyID = CopyID;
 
-            if (_BookID == -1)
-            {
-                _Mode = enMode.AddNew;
-            } else
-            {
-                _Mode = enMode.Update;
-            }
+            _Mode = enMode.Update;
         }
 
-        private void _LoadData()
+        private void _ResetDefaultValues()
         {
             if (_Mode == enMode.AddNew)
             {
                 _Copy = new clsCopies();
+                this.Text = "Add New Copy";
                 lblTitle.Text = "Add New Copy";
+            }
+            else
+            {
+                this.Text = "Update Copy";
+                lblTitle.Text = "Update Copy";
+            }
+            tbCopyInfo.Enabled = false;
+            rbAvailable.Checked = true;
+        }
+        private void _LoadData()
+        {
+            _Copy = clsCopies.Find(_CopyID);
+            if (_Copy == null)
+            {
+                MessageBox.Show("This form will be closed because No Copy with ID = " + _CopyID);
+                this.Close();
                 return;
             }
-
-
+            ctrlBookDetailsWithFilter1.LoadBookInfo(_Copy.BookID);
+            lblCopyID.Text = _Copy.CopyID.ToString();
+            rbAvailable.Checked = _Copy.AvailabilityStatus == true ? true : false;
+        }
+        private void frmAddEditCopy_Load(object sender, EventArgs e)
+        {
+            _ResetDefaultValues();
+            if (_Mode == enMode.Update)
+                _LoadData();
         }
 
         private void frmAddEditCopy_Activated(object sender, EventArgs e)
         {
             ctrlBookDetailsWithFilter1.txtFocus();
         }
-
-        private void ctrlBookDetailsWithFilter1_OnBookSelected(int obj)
-        {
-            _BookID = obj;
-            if (_BookID != -1)
-            MessageBox.Show("Selected BookID is: " + _BookID);
-        }
-
         private void btnNext_Click(object sender, EventArgs e)
         {
-            tbBookInfo.Enabled = false;
-            tabControl1.SelectedTab = tbCopyInfo;
+            if (ctrlBookDetailsWithFilter1.BookID != -1)
+            {
+                tbBookInfo.Enabled = false;
+                tbCopyInfo.Enabled = true;
+                tabControl1.SelectedTab = tbCopyInfo;
+                btnSave.Enabled = true;
+            }
+            else
+                MessageBox.Show("Please Select a Book", "Select a Book", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            ctrlBookDetailsWithFilter1.txtFocus();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -75,20 +99,16 @@ namespace SimpleLibraryWinForm.BookCopies
 
             if (_Copy.Save())
             {
-                MessageBox.Show("Data Saved Successfully");
                 lblCopyID.Text = _Copy.CopyID.ToString();
-
+                MessageBox.Show("Data Saved Successfully");
+                _Mode = enMode.Update;
+                lblTitle.Text = "Update Copy";
+                this.Text = "Update Copy";
+                tbBookInfo.Enabled = true;
             }
             else
-            {
                 MessageBox.Show("Copy Failed To Save");
-            }
-
-        }
-
-        private void frmAddEditCopy_Load(object sender, EventArgs e)
-        {
-            _LoadData();
         }
     }
 }
+    
