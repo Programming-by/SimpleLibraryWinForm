@@ -52,6 +52,12 @@
     <Compile Include="BookCopies\Controls\ctrlCopyDetails.Designer.cs">
       <DependentUpon>ctrlCopyDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookCopies\Controls\ctrlCopyDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BookCopies\Controls\ctrlCopyDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlCopyDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookCopies\frmAddEditCopy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
       <DependentUpon>frmShowBookDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Classes\clsFormat.cs" />
+    <Compile Include="Reservations\frmAddEditReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmAddEditReservation.Designer.cs">
+      <DependentUpon>frmAddEditReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reservations\frmListReservations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +142,9 @@
     <EmbeddedResource Include="BookCopies\Controls\ctrlCopyDetails.resx">
       <DependentUpon>ctrlCopyDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BookCopies\Controls\ctrlCopyDetailsWithFilter.resx">
+      <DependentUpon>ctrlCopyDetailsWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookCopies\frmAddEditCopy.resx">
       <DependentUpon>frmAddEditCopy.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmShowBookDetails.resx">
       <DependentUpon>frmShowBookDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmAddEditReservation.resx">
+      <DependentUpon>frmAddEditReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reservations\frmListReservations.resx">
       <DependentUpon>frmListReservations.cs</DependentUpon>

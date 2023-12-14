@@ -92,5 +92,41 @@ namespace SimpleLibraryWinForm.Reservations
                 _dtReservations.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilter.Text.Trim());
             lblRecordsCount.Text = dgvReservations.Rows.Count.ToString();
         }
+
+        private void btnAddNewReservation_Click(object sender, EventArgs e)
+        {
+            frmAddEditReservation frm = new frmAddEditReservation();
+            frm.ShowDialog();
+        }
+
+        private void addNewReservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditReservation frm = new frmAddEditReservation();
+            frm.ShowDialog();
+            ListReservations_Load(null, null);
+
+        }
+
+        private void editReservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditReservation frm = new frmAddEditReservation((int)dgvReservations.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            ListReservations_Load(null, null);
+        }
+
+        private void deleteReservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete this reservation?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                return;
+
+            int ReservationID = (int)dgvReservations.CurrentRow.Cells[0].Value;
+            if (clsReservations.DeleteReservation(ReservationID))
+            {
+                MessageBox.Show("Reservation Deleted Successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ListReservations_Load(null, null);
+            }
+            else
+                MessageBox.Show("Reservation Failed to Delete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

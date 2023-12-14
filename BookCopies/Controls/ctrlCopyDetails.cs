@@ -13,7 +13,16 @@ namespace SimpleLibraryWinForm.BookCopies
 {
     public partial class ctrlCopyDetails : UserControl
     {
-        clsCopies _Copy;
+        private clsCopies _Copy;
+
+        public clsCopies SelectedCopyInfo
+        {
+            get { return _Copy; }
+        }
+
+        private int _CopyID;
+
+        public int CopyID { get { return _CopyID; } }
         public ctrlCopyDetails()
         {
             InitializeComponent();
@@ -29,7 +38,7 @@ namespace SimpleLibraryWinForm.BookCopies
                 lblAvailabilityStatus.Text = "[????]";
                 return;
             }
-
+            _CopyID = CopyID;
             ctrlBookDetails1.LoadBookInfo(_Copy.BookID);
             lblAvailabilityStatus.Text = _Copy.AvailabilityStatus == true ? "Available" : "Not Available";
         }

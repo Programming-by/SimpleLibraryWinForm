@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.dgvReservations = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
@@ -63,29 +63,32 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewUserToolStripMenuItem,
-            this.editUserToolStripMenuItem,
-            this.deleteUserToolStripMenuItem});
+            this.addNewReservationToolStripMenuItem,
+            this.editReservationToolStripMenuItem,
+            this.deleteReservationToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(174, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(222, 104);
             // 
-            // addNewUserToolStripMenuItem
+            // addNewReservationToolStripMenuItem
             // 
-            this.addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
-            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.addNewUserToolStripMenuItem.Text = "Add New User";
+            this.addNewReservationToolStripMenuItem.Name = "addNewReservationToolStripMenuItem";
+            this.addNewReservationToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.addNewReservationToolStripMenuItem.Text = "Add New Reservation";
+            this.addNewReservationToolStripMenuItem.Click += new System.EventHandler(this.addNewReservationToolStripMenuItem_Click);
             // 
-            // editUserToolStripMenuItem
+            // editReservationToolStripMenuItem
             // 
-            this.editUserToolStripMenuItem.Name = "editUserToolStripMenuItem";
-            this.editUserToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.editUserToolStripMenuItem.Text = "Edit User";
+            this.editReservationToolStripMenuItem.Name = "editReservationToolStripMenuItem";
+            this.editReservationToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.editReservationToolStripMenuItem.Text = "Edit Reservation";
+            this.editReservationToolStripMenuItem.Click += new System.EventHandler(this.editReservationToolStripMenuItem_Click);
             // 
-            // deleteUserToolStripMenuItem
+            // deleteReservationToolStripMenuItem
             // 
-            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.deleteUserToolStripMenuItem.Text = "Delete User";
+            this.deleteReservationToolStripMenuItem.Name = "deleteReservationToolStripMenuItem";
+            this.deleteReservationToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            this.deleteReservationToolStripMenuItem.Text = "Delete Reservation";
+            this.deleteReservationToolStripMenuItem.Click += new System.EventHandler(this.deleteReservationToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -140,6 +143,7 @@
             this.btnAddNewReservation.TabIndex = 15;
             this.btnAddNewReservation.Text = "Add";
             this.btnAddNewReservation.UseVisualStyleBackColor = true;
+            this.btnAddNewReservation.Click += new System.EventHandler(this.btnAddNewReservation_Click);
             // 
             // lblRecordsCount
             // 
@@ -188,9 +192,9 @@
 
         private System.Windows.Forms.DataGridView dgvReservations;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem addNewUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewReservationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editReservationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteReservationToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtFilter;

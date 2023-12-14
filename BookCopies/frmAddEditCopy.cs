@@ -13,6 +13,9 @@ namespace SimpleLibraryWinForm.BookCopies
 {
     public partial class frmAddEditCopy : Form
     {
+        public delegate void DataBackHandler(object sender, int CopyID);
+
+        public event DataBackHandler DataBack;
         enum enMode { AddNew = 0, Update = 1 }
         enMode _Mode;
         int _CopyID = -1;
@@ -106,6 +109,7 @@ namespace SimpleLibraryWinForm.BookCopies
                 _Mode = enMode.Update;
                 lblTitle.Text = "Update Copy";
                 this.Text = "Update Copy";
+                DataBack?.Invoke(this, _Copy.CopyID);
             }
             else
                 MessageBox.Show("Copy Failed To Save");
