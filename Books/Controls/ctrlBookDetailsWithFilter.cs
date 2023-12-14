@@ -18,7 +18,10 @@ namespace SimpleLibraryWinForm.Books
         {
             get { return _FilterEnabled; }
 
-            set { _FilterEnabled = value; }
+            set { 
+                _FilterEnabled = value;
+                gpFilter.Enabled = _FilterEnabled;
+            }
         }
 
         private int _BookID;

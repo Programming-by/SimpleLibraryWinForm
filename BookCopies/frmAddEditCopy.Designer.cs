@@ -38,13 +38,13 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.rbAvailable = new System.Windows.Forms.RadioButton();
             this.rbNotAvailable = new System.Windows.Forms.RadioButton();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbInfo = new System.Windows.Forms.TabControl();
             this.tbBookInfo = new System.Windows.Forms.TabPage();
             this.btnNext = new System.Windows.Forms.Button();
             this.ctrlBookDetailsWithFilter1 = new SimpleLibraryWinForm.Books.ctrlBookDetailsWithFilter();
             this.tbCopyInfo = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tbInfo.SuspendLayout();
             this.tbBookInfo.SuspendLayout();
             this.tbCopyInfo.SuspendLayout();
             this.SuspendLayout();
@@ -136,15 +136,15 @@
             this.rbNotAvailable.Text = "Not Available";
             this.rbNotAvailable.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // tbInfo
             // 
-            this.tabControl1.Controls.Add(this.tbBookInfo);
-            this.tabControl1.Controls.Add(this.tbCopyInfo);
-            this.tabControl1.Location = new System.Drawing.Point(27, 73);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(873, 400);
-            this.tabControl1.TabIndex = 40;
+            this.tbInfo.Controls.Add(this.tbBookInfo);
+            this.tbInfo.Controls.Add(this.tbCopyInfo);
+            this.tbInfo.Location = new System.Drawing.Point(27, 73);
+            this.tbInfo.Name = "tbInfo";
+            this.tbInfo.SelectedIndex = 0;
+            this.tbInfo.Size = new System.Drawing.Size(873, 400);
+            this.tbInfo.TabIndex = 40;
             // 
             // tbBookInfo
             // 
@@ -196,7 +196,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 591);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tbInfo);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitle);
@@ -205,7 +205,7 @@
             this.Activated += new System.EventHandler(this.frmAddEditCopy_Activated);
             this.Load += new System.EventHandler(this.frmAddEditCopy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tbInfo.ResumeLayout(false);
             this.tbBookInfo.ResumeLayout(false);
             this.tbCopyInfo.ResumeLayout(false);
             this.tbCopyInfo.PerformLayout();
@@ -224,7 +224,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.RadioButton rbNotAvailable;
         private System.Windows.Forms.RadioButton rbAvailable;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tbInfo;
         private System.Windows.Forms.TabPage tbBookInfo;
         private System.Windows.Forms.TabPage tbCopyInfo;
         private Books.ctrlBookDetailsWithFilter ctrlBookDetailsWithFilter1;

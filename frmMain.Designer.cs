@@ -31,15 +31,15 @@
             this.msMainMenue = new System.Windows.Forms.MenuStrip();
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ManageBooksStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.BookCopiesStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.finesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.borrowingRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BookCopiesStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.reservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.borrowingRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.finesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenue.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,9 +76,14 @@
             // ManageBooksStripMenuItem1
             // 
             this.ManageBooksStripMenuItem1.Name = "ManageBooksStripMenuItem1";
-            this.ManageBooksStripMenuItem1.Size = new System.Drawing.Size(227, 32);
+            this.ManageBooksStripMenuItem1.Size = new System.Drawing.Size(263, 32);
             this.ManageBooksStripMenuItem1.Text = "Manage Books";
             this.ManageBooksStripMenuItem1.Click += new System.EventHandler(this.ManageBooksStripMenuItem1_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(260, 6);
             // 
             // BookCopiesStripMenuItem1
             // 
@@ -87,10 +92,39 @@
             this.BookCopiesStripMenuItem1.Text = "Book Copies";
             this.BookCopiesStripMenuItem1.Click += new System.EventHandler(this.BookCopiesStripMenuItem1_Click);
             // 
-            // toolStripSeparator1
+            // toolStripSeparator2
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(224, 6);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(260, 6);
+            // 
+            // reservationsToolStripMenuItem
+            // 
+            this.reservationsToolStripMenuItem.Name = "reservationsToolStripMenuItem";
+            this.reservationsToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
+            this.reservationsToolStripMenuItem.Text = "Reservations";
+            this.reservationsToolStripMenuItem.Click += new System.EventHandler(this.reservationsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(260, 6);
+            // 
+            // borrowingRecordsToolStripMenuItem
+            // 
+            this.borrowingRecordsToolStripMenuItem.Name = "borrowingRecordsToolStripMenuItem";
+            this.borrowingRecordsToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
+            this.borrowingRecordsToolStripMenuItem.Text = "Borrowing Records";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(260, 6);
+            // 
+            // finesToolStripMenuItem
+            // 
+            this.finesToolStripMenuItem.Name = "finesToolStripMenuItem";
+            this.finesToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
+            this.finesToolStripMenuItem.Text = "Fines";
             // 
             // usersToolStripMenuItem
             // 
@@ -100,39 +134,6 @@
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
-            // 
-            // reservationsToolStripMenuItem
-            // 
-            this.reservationsToolStripMenuItem.Name = "reservationsToolStripMenuItem";
-            this.reservationsToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
-            this.reservationsToolStripMenuItem.Text = "Reservations";
-            // 
-            // finesToolStripMenuItem
-            // 
-            this.finesToolStripMenuItem.Name = "finesToolStripMenuItem";
-            this.finesToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
-            this.finesToolStripMenuItem.Text = "Fines";
-            // 
-            // borrowingRecordsToolStripMenuItem
-            // 
-            this.borrowingRecordsToolStripMenuItem.Name = "borrowingRecordsToolStripMenuItem";
-            this.borrowingRecordsToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
-            this.borrowingRecordsToolStripMenuItem.Text = "Borrowing Records";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(260, 6);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(260, 6);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(260, 6);
             // 
             // frmMain
             // 

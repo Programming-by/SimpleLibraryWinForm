@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCopies = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showCopyDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewCopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editCopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,35 +115,44 @@
             this.dgvCopies.RowTemplate.Height = 24;
             this.dgvCopies.Size = new System.Drawing.Size(1005, 275);
             this.dgvCopies.TabIndex = 20;
+            this.dgvCopies.DoubleClick += new System.EventHandler(this.dgvCopies_DoubleClick);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showCopyDetailsToolStripMenuItem,
             this.addNewCopyToolStripMenuItem,
             this.editCopyToolStripMenuItem,
             this.deleteCopyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(179, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 100);
+            // 
+            // showCopyDetailsToolStripMenuItem
+            // 
+            this.showCopyDetailsToolStripMenuItem.Name = "showCopyDetailsToolStripMenuItem";
+            this.showCopyDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.showCopyDetailsToolStripMenuItem.Text = "Show Copy Details";
+            this.showCopyDetailsToolStripMenuItem.Click += new System.EventHandler(this.showCopyDetailsToolStripMenuItem_Click);
             // 
             // addNewCopyToolStripMenuItem
             // 
             this.addNewCopyToolStripMenuItem.Name = "addNewCopyToolStripMenuItem";
-            this.addNewCopyToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.addNewCopyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.addNewCopyToolStripMenuItem.Text = "Add New Copy";
             this.addNewCopyToolStripMenuItem.Click += new System.EventHandler(this.addNewCopyToolStripMenuItem_Click);
             // 
             // editCopyToolStripMenuItem
             // 
             this.editCopyToolStripMenuItem.Name = "editCopyToolStripMenuItem";
-            this.editCopyToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.editCopyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.editCopyToolStripMenuItem.Text = "Edit Copy";
             this.editCopyToolStripMenuItem.Click += new System.EventHandler(this.editCopyToolStripMenuItem_Click);
             // 
             // deleteCopyToolStripMenuItem
             // 
             this.deleteCopyToolStripMenuItem.Name = "deleteCopyToolStripMenuItem";
-            this.deleteCopyToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.deleteCopyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.deleteCopyToolStripMenuItem.Text = "Delete Copy";
             this.deleteCopyToolStripMenuItem.Click += new System.EventHandler(this.deleteCopyToolStripMenuItem_Click);
             // 
@@ -219,5 +229,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cbAvailabilityStatus;
+        private System.Windows.Forms.ToolStripMenuItem showCopyDetailsToolStripMenuItem;
     }
 }

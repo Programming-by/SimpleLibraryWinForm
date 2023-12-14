@@ -16,7 +16,6 @@ namespace SimpleLibraryWinForm.BookCopies
         enum enMode { AddNew = 0, Update = 1 }
         enMode _Mode;
         int _CopyID = -1;
-        int _BookID = -1;
         clsCopies _Copy;
         public frmAddEditCopy()
         {
@@ -45,6 +44,7 @@ namespace SimpleLibraryWinForm.BookCopies
             {
                 this.Text = "Update Copy";
                 lblTitle.Text = "Update Copy";
+                //tbBookInfo.Enabled = false;
             }
             tbCopyInfo.Enabled = false;
             rbAvailable.Checked = true;
@@ -52,6 +52,7 @@ namespace SimpleLibraryWinForm.BookCopies
         private void _LoadData()
         {
             _Copy = clsCopies.Find(_CopyID);
+            ctrlBookDetailsWithFilter1.FilterEnabled = false;
             if (_Copy == null)
             {
                 MessageBox.Show("This form will be closed because No Copy with ID = " + _CopyID);
@@ -79,7 +80,8 @@ namespace SimpleLibraryWinForm.BookCopies
             {
                 tbBookInfo.Enabled = false;
                 tbCopyInfo.Enabled = true;
-                tabControl1.SelectedTab = tbCopyInfo;
+                tbInfo.SelectedTab = tbInfo.TabPages["tbCopyInfo"];
+
                 btnSave.Enabled = true;
             }
             else
@@ -94,7 +96,7 @@ namespace SimpleLibraryWinForm.BookCopies
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _Copy.BookID = _BookID;
+            _Copy.BookID = ctrlBookDetailsWithFilter1.BookID;
             _Copy.AvailabilityStatus = rbAvailable.Checked;
 
             if (_Copy.Save())
@@ -104,7 +106,6 @@ namespace SimpleLibraryWinForm.BookCopies
                 _Mode = enMode.Update;
                 lblTitle.Text = "Update Copy";
                 this.Text = "Update Copy";
-                tbBookInfo.Enabled = true;
             }
             else
                 MessageBox.Show("Copy Failed To Save");

@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.txtFilterBy = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
-            this.goFilter = new System.Windows.Forms.GroupBox();
+            this.gpFilter = new System.Windows.Forms.GroupBox();
             this.btnAddNewBook = new System.Windows.Forms.Button();
             this.cbFilters = new System.Windows.Forms.ComboBox();
             this.ctrlBookDetails1 = new SimpleLibraryWinForm.Books.ctrlBookDetails();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.goFilter.SuspendLayout();
+            this.gpFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,18 +60,18 @@
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // goFilter
+            // gpFilter
             // 
-            this.goFilter.Controls.Add(this.btnAddNewBook);
-            this.goFilter.Controls.Add(this.cbFilters);
-            this.goFilter.Controls.Add(this.txtFilterBy);
-            this.goFilter.Controls.Add(this.btnFind);
-            this.goFilter.Location = new System.Drawing.Point(21, 16);
-            this.goFilter.Name = "goFilter";
-            this.goFilter.Size = new System.Drawing.Size(638, 71);
-            this.goFilter.TabIndex = 4;
-            this.goFilter.TabStop = false;
-            this.goFilter.Text = "Filter";
+            this.gpFilter.Controls.Add(this.btnAddNewBook);
+            this.gpFilter.Controls.Add(this.cbFilters);
+            this.gpFilter.Controls.Add(this.txtFilterBy);
+            this.gpFilter.Controls.Add(this.btnFind);
+            this.gpFilter.Location = new System.Drawing.Point(21, 16);
+            this.gpFilter.Name = "gpFilter";
+            this.gpFilter.Size = new System.Drawing.Size(638, 71);
+            this.gpFilter.TabIndex = 4;
+            this.gpFilter.TabStop = false;
+            this.gpFilter.Text = "Filter";
             // 
             // btnAddNewBook
             // 
@@ -110,13 +110,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.goFilter);
+            this.Controls.Add(this.gpFilter);
             this.Controls.Add(this.ctrlBookDetails1);
             this.Name = "ctrlBookDetailsWithFilter";
             this.Size = new System.Drawing.Size(720, 397);
             this.Load += new System.EventHandler(this.ctrlBookDetailsWithFilter_Load);
-            this.goFilter.ResumeLayout(false);
-            this.goFilter.PerformLayout();
+            this.gpFilter.ResumeLayout(false);
+            this.gpFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -127,7 +127,7 @@
         private System.Windows.Forms.TextBox txtFilterBy;
         private System.Windows.Forms.Button btnFind;
         private ctrlBookDetails ctrlBookDetails1;
-        private System.Windows.Forms.GroupBox goFilter;
+        private System.Windows.Forms.GroupBox gpFilter;
         private System.Windows.Forms.Button btnAddNewBook;
         private System.Windows.Forms.ComboBox cbFilters;
         private System.Windows.Forms.ErrorProvider errorProvider1;
