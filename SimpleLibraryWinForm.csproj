@@ -106,7 +106,20 @@
     <Compile Include="Books\frmShowBookDetails.Designer.cs">
       <DependentUpon>frmShowBookDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Borrowing Records\frmAddEditBorrowingRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrowing Records\frmAddEditBorrowingRecord.Designer.cs">
+      <DependentUpon>frmAddEditBorrowingRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrowing Records\frmListBorrowingRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrowing Records\frmListBorrowingRecords.Designer.cs">
+      <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global Classes\clsFormat.cs" />
+    <Compile Include="Global Classes\clsGlobal.cs" />
     <Compile Include="Reservations\frmAddEditReservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +181,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmShowBookDetails.resx">
       <DependentUpon>frmShowBookDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrowing Records\frmAddEditBorrowingRecord.resx">
+      <DependentUpon>frmAddEditBorrowingRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrowing Records\frmListBorrowingRecords.resx">
+      <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reservations\frmAddEditReservation.resx">
       <DependentUpon>frmAddEditReservation.cs</DependentUpon>

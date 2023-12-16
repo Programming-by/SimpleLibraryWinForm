@@ -64,7 +64,10 @@ namespace SimpleLibraryWinForm.BookCopies
             }
             ctrlBookDetailsWithFilter1.LoadBookInfo(_Copy.BookID);
             lblCopyID.Text = _Copy.CopyID.ToString();
-            rbAvailable.Checked = _Copy.AvailabilityStatus == true ? true : false;
+            if (_Copy.AvailabilityStatus)
+            rbAvailable.Checked =  true;
+            else 
+            rbNotAvailable.Checked = true;
         }
         private void frmAddEditCopy_Load(object sender, EventArgs e)
         {

@@ -28,3 +28,5 @@ C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.B
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Reservations.frmListReservations.resources
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Reservations.frmAddEditReservation.resources
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.BookCopies.Controls.ctrlCopyDetailsWithFilter.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.frmListBorrowingRecords.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Borrowing_Records.frmAddEditBorrowingRecord.resources

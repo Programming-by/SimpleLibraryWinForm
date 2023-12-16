@@ -44,5 +44,11 @@ namespace SimpleLibraryWinForm
             frmListReservations frm = new frmListReservations();
             frm.ShowDialog();
         }
+
+        private void borrowingRecordsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListBorrowingRecords frm = new frmListBorrowingRecords();
+            frm.ShowDialog();
+        }
     }
 }

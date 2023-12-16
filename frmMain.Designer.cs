@@ -114,6 +114,7 @@
             this.borrowingRecordsToolStripMenuItem.Name = "borrowingRecordsToolStripMenuItem";
             this.borrowingRecordsToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
             this.borrowingRecordsToolStripMenuItem.Text = "Borrowing Records";
+            this.borrowingRecordsToolStripMenuItem.Click += new System.EventHandler(this.borrowingRecordsToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 

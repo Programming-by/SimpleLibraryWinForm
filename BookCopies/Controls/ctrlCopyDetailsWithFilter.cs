@@ -52,10 +52,10 @@ namespace SimpleLibraryWinForm.BookCopies.Controls
                 handler(CopyID);
             }
         }
-        public void LoadCopyInfo(int ReservationID)
+        public void LoadCopyInfo(int CopyID)
         {
-            txtFilterBy.Text = ReservationID.ToString();
-            ctrlCopyDetails1.LoadCopyInfo(ReservationID);
+            txtFilterBy.Text = CopyID.ToString();
+            ctrlCopyDetails1.LoadCopyInfo(CopyID);
         }
         private void ctrlCopyDetailsWithFilter_Load(object sender, EventArgs e)
         {

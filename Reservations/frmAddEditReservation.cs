@@ -1,6 +1,7 @@
 ﻿using SimpleLibraryBusinessLayer;
 using SimpleLibraryWinForm.Books;
 using SimpleLibraryWinForm.Custom_Classes;
+using SimpleLibraryWinForm.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,8 +48,7 @@ namespace SimpleLibraryWinForm.Reservations
                 this.Text = lblTitle.Text;
             }
             tbReservationInfo.Enabled = false;
-            //dateTimePicker1.MinDate = DateTime.Parse(clsFormat.DateToShort(DateTime.Now));
-            //dateTimePicker1.MaxDate = DateTime.Parse(clsFormat.DateToShort(DateTime.Now.AddMonths(6)));
+         
         }
         private void _LoadData()
         {
@@ -60,7 +60,7 @@ namespace SimpleLibraryWinForm.Reservations
                 this.Close();
                 return;
             }
-            ctrlCopyDetailsWithFilter1.LoadCopyInfo(_ReservationID);
+            ctrlCopyDetailsWithFilter1.LoadCopyInfo(_Reservation.CopyID);
             lblReservationID.Text = _ReservationID.ToString();
             numericUpDown1.Value = _Reservation.UserID;
             dateTimePicker1.Value = _Reservation.ReservationDate;
@@ -75,22 +75,6 @@ namespace SimpleLibraryWinForm.Reservations
                 _LoadData();
         }
 
-        private bool IsCopyAvailable()
-        {
-            clsCopies _Copy = clsCopies.Find(ctrlCopyDetailsWithFilter1.CopyID);
-            if (_Copy == null)
-            {
-                MessageBox.Show("Copy doesn't exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return true;
-            }
-
-            if (_Copy.AvailabilityStatus)
-            {
-                return true;
-            }else 
-                return false;
-
-        }
         private void btnNext_Click(object sender, EventArgs e)
         {
 
@@ -104,7 +88,8 @@ namespace SimpleLibraryWinForm.Reservations
           
             if (ctrlCopyDetailsWithFilter1.CopyID != -1)
             {
-                if (!IsCopyAvailable())
+                clsGlobal.CopyID = ctrlCopyDetailsWithFilter1.CopyID;
+                if (!clsGlobal.IsCopyAvailable())
                 {
                     MessageBox.Show("Copy is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
