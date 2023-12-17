@@ -60,9 +60,10 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(313, 191);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(224, 22);
             this.dateTimePicker1.TabIndex = 13;
             // 
             // label2
@@ -188,6 +189,7 @@
             // 
             // ctrlCopyDetailsWithFilter1
             // 
+            this.ctrlCopyDetailsWithFilter1.FilteredEnabled = true;
             this.ctrlCopyDetailsWithFilter1.Location = new System.Drawing.Point(-4, 3);
             this.ctrlCopyDetailsWithFilter1.Name = "ctrlCopyDetailsWithFilter1";
             this.ctrlCopyDetailsWithFilter1.Size = new System.Drawing.Size(699, 395);

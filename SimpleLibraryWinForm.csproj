@@ -118,6 +118,12 @@
     <Compile Include="Borrowing Records\frmListBorrowingRecords.Designer.cs">
       <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fines\frmListFines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fines\frmListFines.Designer.cs">
+      <DependentUpon>frmListFines.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global Classes\clsFormat.cs" />
     <Compile Include="Global Classes\clsGlobal.cs" />
     <Compile Include="Reservations\frmAddEditReservation.cs">
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Borrowing Records\frmListBorrowingRecords.resx">
       <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fines\frmListFines.resx">
+      <DependentUpon>frmListFines.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reservations\frmAddEditReservation.resx">
       <DependentUpon>frmAddEditReservation.cs</DependentUpon>

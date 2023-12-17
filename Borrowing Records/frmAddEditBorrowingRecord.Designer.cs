@@ -31,6 +31,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.tbInfo = new System.Windows.Forms.TabControl();
             this.tbCopyInfo = new System.Windows.Forms.TabPage();
+            this.ctrlCopyDetailsWithFilter1 = new SimpleLibraryWinForm.BookCopies.Controls.ctrlCopyDetailsWithFilter();
             this.btnNext = new System.Windows.Forms.Button();
             this.tbRecordInfo = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.lblRecordID = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.ctrlCopyDetailsWithFilter1 = new SimpleLibraryWinForm.BookCopies.Controls.ctrlCopyDetailsWithFilter();
             this.tbInfo.SuspendLayout();
             this.tbCopyInfo.SuspendLayout();
             this.tbRecordInfo.SuspendLayout();
@@ -81,6 +81,14 @@
             this.tbCopyInfo.TabIndex = 0;
             this.tbCopyInfo.Text = "Copy Info";
             this.tbCopyInfo.UseVisualStyleBackColor = true;
+            // 
+            // ctrlCopyDetailsWithFilter1
+            // 
+            this.ctrlCopyDetailsWithFilter1.FilteredEnabled = true;
+            this.ctrlCopyDetailsWithFilter1.Location = new System.Drawing.Point(6, 6);
+            this.ctrlCopyDetailsWithFilter1.Name = "ctrlCopyDetailsWithFilter1";
+            this.ctrlCopyDetailsWithFilter1.Size = new System.Drawing.Size(693, 378);
+            this.ctrlCopyDetailsWithFilter1.TabIndex = 42;
             // 
             // btnNext
             // 
@@ -132,6 +140,7 @@
             // 
             // dateTimePickerOfDueDate
             // 
+            this.dateTimePickerOfDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerOfDueDate.Location = new System.Drawing.Point(231, 228);
             this.dateTimePickerOfDueDate.Name = "dateTimePickerOfDueDate";
             this.dateTimePickerOfDueDate.Size = new System.Drawing.Size(200, 22);
@@ -139,6 +148,7 @@
             // 
             // dateTimePickerOfBorrowingDate
             // 
+            this.dateTimePickerOfBorrowingDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerOfBorrowingDate.Location = new System.Drawing.Point(231, 169);
             this.dateTimePickerOfBorrowingDate.Name = "dateTimePickerOfBorrowingDate";
             this.dateTimePickerOfBorrowingDate.Size = new System.Drawing.Size(200, 22);
@@ -211,14 +221,6 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // ctrlCopyDetailsWithFilter1
-            // 
-            this.ctrlCopyDetailsWithFilter1.FilteredEnabled = true;
-            this.ctrlCopyDetailsWithFilter1.Location = new System.Drawing.Point(6, 6);
-            this.ctrlCopyDetailsWithFilter1.Name = "ctrlCopyDetailsWithFilter1";
-            this.ctrlCopyDetailsWithFilter1.Size = new System.Drawing.Size(693, 378);
-            this.ctrlCopyDetailsWithFilter1.TabIndex = 42;
             // 
             // frmAddEditBorrowingRecord
             // 

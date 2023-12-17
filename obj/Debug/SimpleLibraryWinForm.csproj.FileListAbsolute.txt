@@ -30,3 +30,4 @@ C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.R
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.BookCopies.Controls.ctrlCopyDetailsWithFilter.resources
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.frmListBorrowingRecords.resources
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Borrowing_Records.frmAddEditBorrowingRecord.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Fines.frmListFines.resources

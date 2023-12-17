@@ -77,7 +77,6 @@ namespace SimpleLibraryWinForm.Reservations
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-
             if (_Mode == enMode.Update)
             {
                 btnSave.Enabled = true;

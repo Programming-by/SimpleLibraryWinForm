@@ -44,8 +44,9 @@ namespace SimpleLibraryWinForm.Borrowing_Records
             lblTitle.Text = "Add New Borrowing Record";
             this.Text = "Add New Borrowing Record";
 
-            dateTimePickerOfBorrowingDate.Value = DateTime.Now;
-            dateTimePickerOfDueDate.Value = DateTime.Now;
+            dateTimePickerOfBorrowingDate.MinDate = DateTime.Now;
+            dateTimePickerOfDueDate.MinDate = DateTime.Now;
+            tbRecordInfo.Enabled = false;
         }
 
 
@@ -59,18 +60,27 @@ namespace SimpleLibraryWinForm.Borrowing_Records
                 this.Close();
                 return;
             }
+               
+         
             ctrlCopyDetailsWithFilter1.LoadCopyInfo(_Record.CopyID);
             lblRecordID.Text = _Record.BorrowingRecordID.ToString();
-            dateTimePickerOfBorrowingDate.Value = _Record.BorrowingDate;
-            dateTimePickerOfDueDate.Value = _Record.DueDate;
+
+            if (DateTime.Now.Date >= _Record.BorrowingDate.Date)
+            {
+                dateTimePickerOfBorrowingDate.MinDate = DateTime.Now;
+                dateTimePickerOfDueDate.MinDate = DateTime.Now;
+            }
+            else
+            {
+                dateTimePickerOfBorrowingDate.MinDate = _Record.BorrowingDate;
+                dateTimePickerOfDueDate.MinDate = _Record.DueDate;
+            }
             tbRecordInfo.Enabled = false;
         }
 
 
         private void frmAddEditBorrowingRecord_Load(object sender, EventArgs e)
         {
-           // dateTimePickerOfBorrowingDate.MinDate = DateTime.Now;
-           // dateTimePickerOfDueDate.MinDate = DateTime.Now;
             _ResetDefaultValues();
             if (_Mode == enMode.Update)
                 _LoadData();
@@ -89,7 +99,6 @@ namespace SimpleLibraryWinForm.Borrowing_Records
                 btnSave.Enabled = true;
                 tbCopyInfo.Enabled = false;
                 tbRecordInfo.Enabled = true ;
-
                 tbInfo.SelectedTab = tbInfo.TabPages["tbRecordInfo"];
                 return;
             }
@@ -117,6 +126,7 @@ namespace SimpleLibraryWinForm.Borrowing_Records
 
                 btnSave.Enabled = true;
                 tbCopyInfo.Enabled = false;
+                tbRecordInfo.Enabled = true ;
                 tbInfo.SelectedTab = tbInfo.TabPages["tbRecordInfo"];
 
 

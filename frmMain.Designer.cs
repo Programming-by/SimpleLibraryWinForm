@@ -126,6 +126,7 @@
             this.finesToolStripMenuItem.Name = "finesToolStripMenuItem";
             this.finesToolStripMenuItem.Size = new System.Drawing.Size(263, 32);
             this.finesToolStripMenuItem.Text = "Fines";
+            this.finesToolStripMenuItem.Click += new System.EventHandler(this.finesToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 

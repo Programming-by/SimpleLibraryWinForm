@@ -1,5 +1,6 @@
 ﻿using SimpleLibraryWinForm.BookCopies;
 using SimpleLibraryWinForm.Books;
+using SimpleLibraryWinForm.Fines;
 using SimpleLibraryWinForm.Reservations;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,12 @@ namespace SimpleLibraryWinForm
         private void borrowingRecordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListBorrowingRecords frm = new frmListBorrowingRecords();
+            frm.ShowDialog();
+        }
+
+        private void finesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListFines frm = new frmListFines();
             frm.ShowDialog();
         }
     }
