@@ -1,5 +1,6 @@
 ﻿using SimpleLibraryBusinessLayer;
 using SimpleLibraryWinForm.Borrowing_Records;
+using SimpleLibraryWinForm.Custom_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -134,6 +135,31 @@ namespace SimpleLibraryWinForm
             }
             else
                 MessageBox.Show("Record Failed to Delete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            object ActualReturnDate = dgvRecords.CurrentRow.Cells[6].Value;
+            returnBookToolStripMenuItem.Enabled = (ActualReturnDate == DBNull.Value);
+        }
+
+        private void returnBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to return this copy?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                return;
+
+            clsBorrowingRecords _Record = clsBorrowingRecords.Find((int)dgvRecords.CurrentRow.Cells[0].Value);
+
+            if (_Record == null)
+            {
+                MessageBox.Show("Record is not found");
+                return;
+            }
+            clsBorrowingRecords.UpdateReturnedCopy(_Record.CopyID);
+            MessageBox.Show("Copy Returned Successfully", "Succeed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _Record.SetActualReturnDate();
+
+            frmListBorrowingRecords_Load(null,null);
         }
     }
 }
