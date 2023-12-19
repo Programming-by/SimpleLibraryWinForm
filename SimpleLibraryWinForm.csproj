@@ -118,6 +118,12 @@
     <Compile Include="Borrowing Records\frmListBorrowingRecords.Designer.cs">
       <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fines\frmAddEditFine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fines\frmAddEditFine.Designer.cs">
+      <DependentUpon>frmAddEditFine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fines\frmListFines.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Borrowing Records\frmListBorrowingRecords.resx">
       <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fines\frmAddEditFine.resx">
+      <DependentUpon>frmAddEditFine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fines\frmListFines.resx">
       <DependentUpon>frmListFines.cs</DependentUpon>

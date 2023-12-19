@@ -102,20 +102,26 @@ namespace SimpleLibraryWinForm.Fines
                 _dtFines.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilter.Text.Trim());
             lblRecordsCount.Text = dgvFines.Rows.Count.ToString();
         }
-
         private void btnAddNewFine_Click(object sender, EventArgs e)
         {
+            frmAddEditFine frm = new frmAddEditFine();
+            frm.ShowDialog();
+            frmListFines_Load(null,null);
 
         }
 
         private void addNewFineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAddEditFine frm = new frmAddEditFine();
+            frm.ShowDialog();
+            frmListFines_Load(null, null);
         }
 
         private void editFineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAddEditFine frm = new frmAddEditFine((int)dgvFines.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListFines_Load(null, null);
         }
 
         private void deleteFineToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,6 +144,27 @@ namespace SimpleLibraryWinForm.Fines
             if (cbFilters.Text == "FineID")
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            bool IsPaid = (bool)dgvFines.CurrentRow.Cells[8].Value;
+            payFineToolStripMenuItem.Enabled = !(IsPaid);
+        }
+
+        private void payFineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to pay this fine?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                return;
+
+            int FineID = (int)dgvFines.CurrentRow.Cells[0].Value;
+            if (clsFines.PayFine(FineID))
+            {
+                MessageBox.Show("Fine Paid Successfully", "Paid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmListFines_Load(null, null);
+            }
+            else
+                MessageBox.Show("Fine Payment Failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

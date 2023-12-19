@@ -41,6 +41,7 @@
             this.deleteFineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.payFineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFines)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -120,9 +121,11 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewFineToolStripMenuItem,
             this.editFineToolStripMenuItem,
-            this.deleteFineToolStripMenuItem});
+            this.deleteFineToolStripMenuItem,
+            this.payFineToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // addNewFineToolStripMenuItem
             // 
@@ -165,6 +168,13 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // payFineToolStripMenuItem
+            // 
+            this.payFineToolStripMenuItem.Name = "payFineToolStripMenuItem";
+            this.payFineToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.payFineToolStripMenuItem.Text = "Pay Fine";
+            this.payFineToolStripMenuItem.Click += new System.EventHandler(this.payFineToolStripMenuItem_Click);
+            // 
             // frmListFines
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,5 +212,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteFineToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ToolStripMenuItem payFineToolStripMenuItem;
     }
 }
