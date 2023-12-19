@@ -94,8 +94,6 @@ namespace SimpleLibraryWinForm.Fines
                 lblNumberOfLateDays.Text = totalDays.ToString();
                 lblFineAmount.Text = (totalDays * 2).ToString();
 
-             
-
                 if (totalDays <= 0)
                 {
                     MessageBox.Show("Cannot Add Fine to this Record because its not late");
@@ -115,8 +113,25 @@ namespace SimpleLibraryWinForm.Fines
             this.Close();
         }
 
+        private void _PreventAddingNewFineForTheSameRecord()
+        {
+            _Fine = clsFines.FindByBorrowingRecordID((int)numericUpDownRecordID.Value);
+
+            if (_Fine == null)
+            {
+                MessageBox.Show("_Fine is not found");
+                return;
+            }
+            if (!_Fine.PaymentStatus)
+            {
+                MessageBox.Show("Cannot add new _Fine for this Record, there is active Fine Application For this Record");
+                return;
+            }
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            _PreventAddingNewFineForTheSameRecord();
+
             _Fine.UserID = (int) numericUpDownUserID.Value;
             _Fine.BorrowingRecordID = (int) numericUpDownRecordID.Value;
             _Fine.NumberOfLateDays = int.Parse(lblNumberOfLateDays.Text);
