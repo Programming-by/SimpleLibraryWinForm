@@ -93,6 +93,12 @@ namespace SimpleLibraryWinForm.Books
             txtFilterBy.Focus();
         }
 
+        public void DataBackEvent(object sender, int BookID)
+        {
+            cbFilters.SelectedIndex = 0;
+            txtFilterBy.Text = BookID.ToString();
+            ctrlBookDetails1.LoadBookInfo(BookID);
+        }
         private void btnAddNewBook_Click(object sender, EventArgs e)
         {
             frmAddEditBook frm = new frmAddEditBook();
@@ -127,14 +133,7 @@ namespace SimpleLibraryWinForm.Books
             if (cbFilters.Text == "BookID")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-  
     
-        public void DataBackEvent(object sender, int BookID)
-        {
-            cbFilters.SelectedIndex = 0;
-            txtFilterBy.Text = BookID.ToString();
-            ctrlBookDetails1.LoadBookInfo(BookID);
-        }
     
     }
 }

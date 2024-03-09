@@ -61,8 +61,8 @@ namespace SimpleLibraryWinForm.Fines
             }
 
             lblFineID.Text = _Fine.FineID.ToString();
-            numericUpDownUserID.Value = _Fine.UserID;
-            numericUpDownRecordID.Value = _Fine.BorrowingRecordID;
+           // numericUpDownUserID.Value = _Fine.UserID;
+           // numericUpDownRecordID.Value = _Fine.BorrowingRecordID;
             lblNumberOfLateDays.Text = _Fine.NumberOfLateDays.ToString();
             lblFineAmount.Text = _Fine.FineAmount.ToString() + "$";
             chkPaymentStatus.Checked = _Fine.PaymentStatus;
@@ -80,31 +80,31 @@ namespace SimpleLibraryWinForm.Fines
      
         private void numericUpDownRecordID_ValueChanged(object sender, EventArgs e)
         {
-            clsBorrowingRecords _Record = clsBorrowingRecords.Find((int)numericUpDownRecordID.Value);
+           // clsBorrowingRecords _Record = clsBorrowingRecords.Find((int)numericUpDownRecordID.Value);
 
-            if (_Record == null)
-            {
-                return;
-            }
-            if (_Record.ActualReturnDate.HasValue)
-            {
-                TimeSpan difference = _Record.ActualReturnDate.Value - _Record.DueDate;
+            //if (_Record == null)
+            //{
+            //    return;
+            //}
+            //if (_Record.ActualReturnDate.HasValue)
+            //{
+            //    TimeSpan difference = _Record.ActualReturnDate.Value - _Record.DueDate;
 
-                double totalDays = difference.TotalDays;
-                lblNumberOfLateDays.Text = totalDays.ToString();
-                lblFineAmount.Text = (totalDays * 2).ToString();
+            //    double totalDays = difference.TotalDays;
+            //    lblNumberOfLateDays.Text = totalDays.ToString();
+            //    lblFineAmount.Text = (totalDays * 2).ToString();
 
-                if (totalDays <= 0)
-                {
-                    MessageBox.Show("Cannot Add Fine to this Record because its not late");
-                    btnSave.Enabled = false;
-                    return;
-                }
-            } 
-            else
-            {
-                return;
-            }
+            //    if (totalDays <= 0)
+            //    {
+            //        MessageBox.Show("Cannot Add Fine to this Record because its not late");
+            //        btnSave.Enabled = false;
+            //        return;
+            //    }
+            //} 
+            //else
+            //{
+            //    return;
+            //}
 
         }
 
@@ -115,25 +115,25 @@ namespace SimpleLibraryWinForm.Fines
 
         private void _PreventAddingNewFineForTheSameRecord()
         {
-            _Fine = clsFines.FindByBorrowingRecordID((int)numericUpDownRecordID.Value);
+           // _Fine = clsFines.FindByBorrowingRecordID((int)numericUpDownRecordID.Value);
 
-            if (_Fine == null)
-            {
-                MessageBox.Show("_Fine is not found");
-                return;
-            }
-            if (!_Fine.PaymentStatus)
-            {
-                MessageBox.Show("Cannot add new _Fine for this Record, there is active Fine Application For this Record");
-                return;
-            }
+            //if (_Fine == null)
+            //{
+            //    MessageBox.Show("_Fine is not found");
+            //    return;
+            //}
+            //if (!_Fine.PaymentStatus)
+            //{
+            //    MessageBox.Show("Cannot add new _Fine for this Record, there is active Fine Application For this Record");
+            //    return;
+            //}
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             _PreventAddingNewFineForTheSameRecord();
 
-            _Fine.UserID = (int) numericUpDownUserID.Value;
-            _Fine.BorrowingRecordID = (int) numericUpDownRecordID.Value;
+           // _Fine.UserID = (int) numericUpDownUserID.Value;
+            //_Fine.BorrowingRecordID = (int) numericUpDownRecordID.Value;
             _Fine.NumberOfLateDays = int.Parse(lblNumberOfLateDays.Text);
             _Fine.FineAmount = int.Parse(lblFineAmount.Text);
             _Fine.PaymentStatus = false;

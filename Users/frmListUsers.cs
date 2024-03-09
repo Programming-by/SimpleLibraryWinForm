@@ -132,5 +132,16 @@ namespace SimpleLibraryWinForm
         {
             this.Close();
         }
+
+        private void showUserDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowUserDetails frm = new frmShowUserDetails((int)dgvUsers.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+        private void dgvUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShowUserDetails frm = new frmShowUserDetails((int)dgvUsers.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SimpleLibraryWinForm.Global_Classes
 {
-    public class clsGlobal
+    public static class clsGlobal
     {
         private static int _CopyID;
         public static int CopyID
@@ -28,14 +28,7 @@ namespace SimpleLibraryWinForm.Global_Classes
                 MessageBox.Show("Copy doesn't exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
-
-            if (_Copy.AvailabilityStatus)
-            {
-                return true;
-            }
-            else
-                return false;
-
+            return _Copy.AvailabilityStatus == true ? true : false;
         }
 
 
