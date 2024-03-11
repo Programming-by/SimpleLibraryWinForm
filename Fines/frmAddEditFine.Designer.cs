@@ -34,20 +34,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.chkPaymentStatus = new System.Windows.Forms.CheckBox();
             this.lblNumberOfLateDays = new System.Windows.Forms.Label();
             this.lblFineAmount = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.tbInfo = new System.Windows.Forms.TabControl();
-            this.tbBookInfo = new System.Windows.Forms.TabPage();
+            this.tbUserInfo = new System.Windows.Forms.TabPage();
             this.btnNextToRecordInfo = new System.Windows.Forms.Button();
-            this.tbCopyInfo = new System.Windows.Forms.TabPage();
-            this.tbFineInfo = new System.Windows.Forms.TabPage();
+            this.tbRecordInfo = new System.Windows.Forms.TabPage();
             this.btnNextToFineInfo = new System.Windows.Forms.Button();
+            this.tbFineInfo = new System.Windows.Forms.TabPage();
+            this.ctrlUserDetailsWithFilter1 = new SimpleLibraryWinForm.Users.Controls.ctrlUserDetailsWithFilter();
+            this.ctrlBorrowingRecordDetailsWithFilter1 = new SimpleLibraryWinForm.Borrowing_Records.Controls.ctrlBorrowingRecordDetailsWithFilter();
+            this.rbPaid = new System.Windows.Forms.RadioButton();
+            this.rbNotPaid = new System.Windows.Forms.RadioButton();
             this.tbInfo.SuspendLayout();
-            this.tbBookInfo.SuspendLayout();
-            this.tbCopyInfo.SuspendLayout();
+            this.tbUserInfo.SuspendLayout();
+            this.tbRecordInfo.SuspendLayout();
             this.tbFineInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,17 +114,6 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "Payment Status:";
             // 
-            // chkPaymentStatus
-            // 
-            this.chkPaymentStatus.AutoSize = true;
-            this.chkPaymentStatus.Enabled = false;
-            this.chkPaymentStatus.Location = new System.Drawing.Point(275, 280);
-            this.chkPaymentStatus.Name = "chkPaymentStatus";
-            this.chkPaymentStatus.Size = new System.Drawing.Size(57, 20);
-            this.chkPaymentStatus.TabIndex = 44;
-            this.chkPaymentStatus.Text = "Paid";
-            this.chkPaymentStatus.UseVisualStyleBackColor = true;
-            // 
             // lblNumberOfLateDays
             // 
             this.lblNumberOfLateDays.AutoSize = true;
@@ -164,8 +156,8 @@
             // 
             // tbInfo
             // 
-            this.tbInfo.Controls.Add(this.tbBookInfo);
-            this.tbInfo.Controls.Add(this.tbCopyInfo);
+            this.tbInfo.Controls.Add(this.tbUserInfo);
+            this.tbInfo.Controls.Add(this.tbRecordInfo);
             this.tbInfo.Controls.Add(this.tbFineInfo);
             this.tbInfo.Location = new System.Drawing.Point(12, 80);
             this.tbInfo.Name = "tbInfo";
@@ -173,16 +165,17 @@
             this.tbInfo.Size = new System.Drawing.Size(873, 400);
             this.tbInfo.TabIndex = 49;
             // 
-            // tbBookInfo
+            // tbUserInfo
             // 
-            this.tbBookInfo.Controls.Add(this.btnNextToRecordInfo);
-            this.tbBookInfo.Location = new System.Drawing.Point(4, 25);
-            this.tbBookInfo.Name = "tbBookInfo";
-            this.tbBookInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbBookInfo.Size = new System.Drawing.Size(865, 371);
-            this.tbBookInfo.TabIndex = 0;
-            this.tbBookInfo.Text = "User Info";
-            this.tbBookInfo.UseVisualStyleBackColor = true;
+            this.tbUserInfo.Controls.Add(this.ctrlUserDetailsWithFilter1);
+            this.tbUserInfo.Controls.Add(this.btnNextToRecordInfo);
+            this.tbUserInfo.Location = new System.Drawing.Point(4, 25);
+            this.tbUserInfo.Name = "tbUserInfo";
+            this.tbUserInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tbUserInfo.Size = new System.Drawing.Size(865, 371);
+            this.tbUserInfo.TabIndex = 0;
+            this.tbUserInfo.Text = "User Info";
+            this.tbUserInfo.UseVisualStyleBackColor = true;
             // 
             // btnNextToRecordInfo
             // 
@@ -192,24 +185,37 @@
             this.btnNextToRecordInfo.TabIndex = 41;
             this.btnNextToRecordInfo.Text = "Next";
             this.btnNextToRecordInfo.UseVisualStyleBackColor = true;
+            this.btnNextToRecordInfo.Click += new System.EventHandler(this.btnNextToRecordInfo_Click);
             // 
-            // tbCopyInfo
+            // tbRecordInfo
             // 
-            this.tbCopyInfo.Controls.Add(this.btnNextToFineInfo);
-            this.tbCopyInfo.Location = new System.Drawing.Point(4, 25);
-            this.tbCopyInfo.Name = "tbCopyInfo";
-            this.tbCopyInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbCopyInfo.Size = new System.Drawing.Size(865, 371);
-            this.tbCopyInfo.TabIndex = 1;
-            this.tbCopyInfo.Text = "Record Info";
-            this.tbCopyInfo.UseVisualStyleBackColor = true;
+            this.tbRecordInfo.Controls.Add(this.ctrlBorrowingRecordDetailsWithFilter1);
+            this.tbRecordInfo.Controls.Add(this.btnNextToFineInfo);
+            this.tbRecordInfo.Location = new System.Drawing.Point(4, 25);
+            this.tbRecordInfo.Name = "tbRecordInfo";
+            this.tbRecordInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tbRecordInfo.Size = new System.Drawing.Size(865, 371);
+            this.tbRecordInfo.TabIndex = 1;
+            this.tbRecordInfo.Text = "Record Info";
+            this.tbRecordInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnNextToFineInfo
+            // 
+            this.btnNextToFineInfo.Location = new System.Drawing.Point(736, 276);
+            this.btnNextToFineInfo.Name = "btnNextToFineInfo";
+            this.btnNextToFineInfo.Size = new System.Drawing.Size(75, 54);
+            this.btnNextToFineInfo.TabIndex = 42;
+            this.btnNextToFineInfo.Text = "Next";
+            this.btnNextToFineInfo.UseVisualStyleBackColor = true;
+            this.btnNextToFineInfo.Click += new System.EventHandler(this.btnNextToFineInfo_Click);
             // 
             // tbFineInfo
             // 
+            this.tbFineInfo.Controls.Add(this.rbNotPaid);
+            this.tbFineInfo.Controls.Add(this.rbPaid);
             this.tbFineInfo.Controls.Add(this.label4);
             this.tbFineInfo.Controls.Add(this.lblFineID);
             this.tbFineInfo.Controls.Add(this.label3);
-            this.tbFineInfo.Controls.Add(this.chkPaymentStatus);
             this.tbFineInfo.Controls.Add(this.lblFineAmount);
             this.tbFineInfo.Controls.Add(this.label6);
             this.tbFineInfo.Controls.Add(this.lblNumberOfLateDays);
@@ -222,14 +228,43 @@
             this.tbFineInfo.Text = "Fine Info";
             this.tbFineInfo.UseVisualStyleBackColor = true;
             // 
-            // btnNextToFineInfo
+            // ctrlUserDetailsWithFilter1
             // 
-            this.btnNextToFineInfo.Location = new System.Drawing.Point(736, 276);
-            this.btnNextToFineInfo.Name = "btnNextToFineInfo";
-            this.btnNextToFineInfo.Size = new System.Drawing.Size(75, 54);
-            this.btnNextToFineInfo.TabIndex = 42;
-            this.btnNextToFineInfo.Text = "Next";
-            this.btnNextToFineInfo.UseVisualStyleBackColor = true;
+            this.ctrlUserDetailsWithFilter1.FilteredEnabled = true;
+            this.ctrlUserDetailsWithFilter1.Location = new System.Drawing.Point(3, 0);
+            this.ctrlUserDetailsWithFilter1.Name = "ctrlUserDetailsWithFilter1";
+            this.ctrlUserDetailsWithFilter1.Size = new System.Drawing.Size(683, 356);
+            this.ctrlUserDetailsWithFilter1.TabIndex = 42;
+            // 
+            // ctrlBorrowingRecordDetailsWithFilter1
+            // 
+            this.ctrlBorrowingRecordDetailsWithFilter1.FilteredEnabled = true;
+            this.ctrlBorrowingRecordDetailsWithFilter1.Location = new System.Drawing.Point(0, 3);
+            this.ctrlBorrowingRecordDetailsWithFilter1.Name = "ctrlBorrowingRecordDetailsWithFilter1";
+            this.ctrlBorrowingRecordDetailsWithFilter1.Size = new System.Drawing.Size(707, 323);
+            this.ctrlBorrowingRecordDetailsWithFilter1.TabIndex = 43;
+            // 
+            // rbPaid
+            // 
+            this.rbPaid.AutoSize = true;
+            this.rbPaid.Location = new System.Drawing.Point(241, 285);
+            this.rbPaid.Name = "rbPaid";
+            this.rbPaid.Size = new System.Drawing.Size(56, 20);
+            this.rbPaid.TabIndex = 47;
+            this.rbPaid.TabStop = true;
+            this.rbPaid.Text = "Paid";
+            this.rbPaid.UseVisualStyleBackColor = true;
+            // 
+            // rbNotPaid
+            // 
+            this.rbNotPaid.AutoSize = true;
+            this.rbNotPaid.Location = new System.Drawing.Point(339, 285);
+            this.rbNotPaid.Name = "rbNotPaid";
+            this.rbNotPaid.Size = new System.Drawing.Size(80, 20);
+            this.rbNotPaid.TabIndex = 48;
+            this.rbNotPaid.TabStop = true;
+            this.rbNotPaid.Text = "Not Paid";
+            this.rbNotPaid.UseVisualStyleBackColor = true;
             // 
             // frmAddEditFine
             // 
@@ -244,8 +279,8 @@
             this.Text = "frmAddEditFine";
             this.Load += new System.EventHandler(this.frmAddEditFine_Load);
             this.tbInfo.ResumeLayout(false);
-            this.tbBookInfo.ResumeLayout(false);
-            this.tbCopyInfo.ResumeLayout(false);
+            this.tbUserInfo.ResumeLayout(false);
+            this.tbRecordInfo.ResumeLayout(false);
             this.tbFineInfo.ResumeLayout(false);
             this.tbFineInfo.PerformLayout();
             this.ResumeLayout(false);
@@ -261,16 +296,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox chkPaymentStatus;
         private System.Windows.Forms.Label lblNumberOfLateDays;
         private System.Windows.Forms.Label lblFineAmount;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TabControl tbInfo;
-        private System.Windows.Forms.TabPage tbBookInfo;
+        private System.Windows.Forms.TabPage tbUserInfo;
         private System.Windows.Forms.Button btnNextToRecordInfo;
-        private System.Windows.Forms.TabPage tbCopyInfo;
+        private System.Windows.Forms.TabPage tbRecordInfo;
         private System.Windows.Forms.Button btnNextToFineInfo;
         private System.Windows.Forms.TabPage tbFineInfo;
+        private Users.Controls.ctrlUserDetailsWithFilter ctrlUserDetailsWithFilter1;
+        private Borrowing_Records.Controls.ctrlBorrowingRecordDetailsWithFilter ctrlBorrowingRecordDetailsWithFilter1;
+        private System.Windows.Forms.RadioButton rbNotPaid;
+        private System.Windows.Forms.RadioButton rbPaid;
     }
 }

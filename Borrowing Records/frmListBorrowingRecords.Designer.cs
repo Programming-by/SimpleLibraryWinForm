@@ -39,9 +39,10 @@
             this.addNewRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.returnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showRecordDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -114,39 +115,48 @@
             this.dgvRecords.RowTemplate.Height = 24;
             this.dgvRecords.Size = new System.Drawing.Size(1005, 275);
             this.dgvRecords.TabIndex = 29;
+            this.dgvRecords.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecords_CellDoubleClick);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showRecordDetailsToolStripMenuItem,
             this.addNewRecordToolStripMenuItem,
             this.editRecordToolStripMenuItem,
             this.deleteRecordToolStripMenuItem,
             this.returnBookToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(216, 124);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // addNewRecordToolStripMenuItem
             // 
             this.addNewRecordToolStripMenuItem.Name = "addNewRecordToolStripMenuItem";
-            this.addNewRecordToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewRecordToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
             this.addNewRecordToolStripMenuItem.Text = "Add New Record";
             this.addNewRecordToolStripMenuItem.Click += new System.EventHandler(this.addNewRecordToolStripMenuItem_Click);
             // 
             // editRecordToolStripMenuItem
             // 
             this.editRecordToolStripMenuItem.Name = "editRecordToolStripMenuItem";
-            this.editRecordToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editRecordToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
             this.editRecordToolStripMenuItem.Text = "Edit Record";
             this.editRecordToolStripMenuItem.Click += new System.EventHandler(this.editRecordToolStripMenuItem_Click);
             // 
             // deleteRecordToolStripMenuItem
             // 
             this.deleteRecordToolStripMenuItem.Name = "deleteRecordToolStripMenuItem";
-            this.deleteRecordToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteRecordToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
             this.deleteRecordToolStripMenuItem.Text = "Delete Record";
             this.deleteRecordToolStripMenuItem.Click += new System.EventHandler(this.deleteRecordToolStripMenuItem_Click);
+            // 
+            // returnBookToolStripMenuItem
+            // 
+            this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
+            this.returnBookToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
+            this.returnBookToolStripMenuItem.Text = "Return Book";
+            this.returnBookToolStripMenuItem.Click += new System.EventHandler(this.returnBookToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -168,12 +178,12 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // returnBookToolStripMenuItem
+            // showRecordDetailsToolStripMenuItem
             // 
-            this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
-            this.returnBookToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.returnBookToolStripMenuItem.Text = "Return Book";
-            this.returnBookToolStripMenuItem.Click += new System.EventHandler(this.returnBookToolStripMenuItem_Click);
+            this.showRecordDetailsToolStripMenuItem.Name = "showRecordDetailsToolStripMenuItem";
+            this.showRecordDetailsToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
+            this.showRecordDetailsToolStripMenuItem.Text = "Show Record Details";
+            this.showRecordDetailsToolStripMenuItem.Click += new System.EventHandler(this.showRecordDetailsToolStripMenuItem_Click);
             // 
             // frmListBorrowingRecords
             // 
@@ -213,5 +223,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ToolStripMenuItem returnBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showRecordDetailsToolStripMenuItem;
     }
 }

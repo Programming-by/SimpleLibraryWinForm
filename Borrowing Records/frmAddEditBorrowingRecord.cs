@@ -19,6 +19,10 @@ namespace SimpleLibraryWinForm.Borrowing_Records
         enMode _Mode;
         private int _RecordID;
         clsBorrowingRecords _Record;
+
+        public delegate void DataBackHandler(object sender, int RecordID);
+
+        public DataBackHandler DataBack;
         public frmAddEditBorrowingRecord()
         {
             InitializeComponent();
@@ -40,12 +44,21 @@ namespace SimpleLibraryWinForm.Borrowing_Records
 
         private void _ResetDefaultValues()
         {
+            if (_Mode == enMode.AddNew)
+            {
             _Record = new clsBorrowingRecords();
             lblTitle.Text = "Add New Borrowing Record";
-            this.Text = "Add New Borrowing Record";
+            this.Text = lblTitle.Text;
+
+            } else
+            {
+                lblTitle.Text = "Update Borrowing Record";
+                this.Text = lblTitle.Text;
+            }
 
             dateTimePickerOfBorrowingDate.MinDate = DateTime.Now;
             dateTimePickerOfDueDate.MinDate = DateTime.Now;
+            tbCopyInfo.Enabled = false;
             tbRecordInfo.Enabled = false;
         }
 
@@ -53,6 +66,7 @@ namespace SimpleLibraryWinForm.Borrowing_Records
         private void _LoadData()
         {
             _Record = clsBorrowingRecords.Find(_RecordID);
+            ctrlUserDetailsWithFilter1.FilteredEnabled = false;
             ctrlCopyDetailsWithFilter1.FilteredEnabled = false;
             if (_Record == null)
             {
@@ -60,8 +74,8 @@ namespace SimpleLibraryWinForm.Borrowing_Records
                 this.Close();
                 return;
             }
-               
-         
+
+            ctrlUserDetailsWithFilter1.LoadUserInfo(_Record.UserID);
             ctrlCopyDetailsWithFilter1.LoadCopyInfo(_Record.CopyID);
             lblRecordID.Text = _Record.BorrowingRecordID.ToString();
 
@@ -91,14 +105,33 @@ namespace SimpleLibraryWinForm.Borrowing_Records
             ctrlCopyDetailsWithFilter1.txtFocus();
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private void btnNextToCopyInfo_Click(object sender, EventArgs e)
         {
-
             if (_Mode == enMode.Update)
             {
                 btnSave.Enabled = true;
-                tbCopyInfo.Enabled = false;
-                tbRecordInfo.Enabled = true ;
+                tbCopyInfo.Enabled = true;
+                tbInfo.SelectedTab = tbInfo.TabPages["tbCopyInfo"];
+                return;
+            }
+
+
+            if (ctrlUserDetailsWithFilter1.UserID != -1)
+            {
+                btnSave.Enabled = true;
+                tbCopyInfo.Enabled = true;
+                tbInfo.SelectedTab = tbInfo.TabPages["tbCopyInfo"];
+            }
+            else
+                MessageBox.Show("Please Select a User", "Select a User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            ctrlUserDetailsWithFilter1.txtFocus();
+        }
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (_Mode == enMode.Update)
+            {
+                btnSave.Enabled = true;
+                tbRecordInfo.Enabled = true;
                 tbInfo.SelectedTab = tbInfo.TabPages["tbRecordInfo"];
                 return;
             }
@@ -138,7 +171,7 @@ namespace SimpleLibraryWinForm.Borrowing_Records
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _Record.UserID  = (int) numericUpDown1.Value;
+            _Record.UserID  = ctrlUserDetailsWithFilter1.UserID;
             _Record.CopyID = ctrlCopyDetailsWithFilter1.CopyID;
             _Record.BorrowingDate = dateTimePickerOfBorrowingDate.Value;
             _Record.DueDate = dateTimePickerOfDueDate.Value;
@@ -150,9 +183,11 @@ namespace SimpleLibraryWinForm.Borrowing_Records
                 _Mode = enMode.Update;
                 lblTitle.Text = "Update Borrowing Record";
                 this.Text = "Update Borrowing Record";
+                DataBack?.Invoke(this,_Record.BorrowingRecordID);
             }
             else
                 MessageBox.Show("Record Failed To Save");
         }
+
     }
 }

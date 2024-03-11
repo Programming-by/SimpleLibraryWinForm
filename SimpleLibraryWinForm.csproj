@@ -107,6 +107,18 @@
     <Compile Include="Books\frmShowBookDetails.Designer.cs">
       <DependentUpon>frmShowBookDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Borrowing Records\Controls\ctrlBorrowingRecordDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Borrowing Records\Controls\ctrlBorrowingRecordDetails.Designer.cs">
+      <DependentUpon>ctrlBorrowingRecordDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrowing Records\Controls\ctrlBorrowingRecordDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Borrowing Records\Controls\ctrlBorrowingRecordDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlBorrowingRecordDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Borrowing Records\frmAddEditBorrowingRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +130,12 @@
     </Compile>
     <Compile Include="Borrowing Records\frmListBorrowingRecords.Designer.cs">
       <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrowing Records\frmShowRecordDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrowing Records\frmShowRecordDetails.Designer.cs">
+      <DependentUpon>frmShowRecordDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Fines\frmAddEditFine.cs">
       <SubType>Form</SubType>
@@ -150,6 +168,12 @@
     </Compile>
     <Compile Include="Users\Controls\ctrlUserDetails.Designer.cs">
       <DependentUpon>ctrlUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Controls\ctrlUserDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Controls\ctrlUserDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlUserDetailsWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmAddEditUser.cs">
       <SubType>Form</SubType>
@@ -207,11 +231,20 @@
     <EmbeddedResource Include="Books\frmShowBookDetails.resx">
       <DependentUpon>frmShowBookDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Borrowing Records\Controls\ctrlBorrowingRecordDetails.resx">
+      <DependentUpon>ctrlBorrowingRecordDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrowing Records\Controls\ctrlBorrowingRecordDetailsWithFilter.resx">
+      <DependentUpon>ctrlBorrowingRecordDetailsWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Borrowing Records\frmAddEditBorrowingRecord.resx">
       <DependentUpon>frmAddEditBorrowingRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Borrowing Records\frmListBorrowingRecords.resx">
       <DependentUpon>frmListBorrowingRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrowing Records\frmShowRecordDetails.resx">
+      <DependentUpon>frmShowRecordDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fines\frmAddEditFine.resx">
       <DependentUpon>frmAddEditFine.cs</DependentUpon>
@@ -227,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users\Controls\ctrlUserDetails.resx">
       <DependentUpon>ctrlUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Controls\ctrlUserDetailsWithFilter.resx">
+      <DependentUpon>ctrlUserDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>

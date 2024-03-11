@@ -16,6 +16,10 @@ namespace SimpleLibraryWinForm.Users
         clsUsers _User;
 
         private int _UserID = -1;
+
+        public delegate void DataBackHandler(object sender , int UserID);
+
+        public DataBackHandler DataBack;
         public frmAddEditUser()
         {
             InitializeComponent();
@@ -67,6 +71,7 @@ namespace SimpleLibraryWinForm.Users
             {
                 MessageBox.Show("Data Saved Successfully");
                 lblUserID.Text = _User.UserID.ToString();
+                DataBack?.Invoke(this,_User.UserID);
             } else
             {
                 MessageBox.Show("User Failed To Save");

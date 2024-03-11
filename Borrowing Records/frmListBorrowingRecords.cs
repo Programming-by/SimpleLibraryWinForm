@@ -161,5 +161,19 @@ namespace SimpleLibraryWinForm
 
             frmListBorrowingRecords_Load(null,null);
         }
+
+        private void showRecordDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowRecordDetails frm = new frmShowRecordDetails((int)dgvRecords.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
+
+        private void dgvRecords_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShowRecordDetails frm = new frmShowRecordDetails((int)dgvRecords.CurrentRow.Cells[0].Value);
+
+            frm.ShowDialog();
+        }
     }
 }

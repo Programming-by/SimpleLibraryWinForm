@@ -13,8 +13,6 @@ namespace SimpleLibraryWinForm.BookCopies.Controls
 {
     public partial class ctrlCopyDetailsWithFilter : UserControl
     {
-        private int _CopyID;
-
         public int CopyID
         {
             get { return ctrlCopyDetails1.CopyID; }

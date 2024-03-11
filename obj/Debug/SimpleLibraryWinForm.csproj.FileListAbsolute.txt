@@ -34,3 +34,7 @@ C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.F
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Fines.frmAddEditFine.resources
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Users.Controls.ctrlUserDetails.resources
 C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Users.frmShowUserDetails.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Users.Controls.ctrlUserDetailsWithFilter.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Borrowing_Records.Controls.ctrlBorrowingRecordDetails.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Borrowing_Records.Controls.ctrlBorrowingRecordDetailsWithFilter.resources
+C:\Users\User\Source\Repos\SimpleLibraryWinForm\obj\Debug\SimpleLibraryWinForm.Borrowing_Records.frmShowRecordDetails.resources
