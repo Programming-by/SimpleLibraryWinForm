@@ -36,20 +36,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvRecords = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showRecordDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.showRecordDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFilter
             // 
-            this.txtFilter.Location = new System.Drawing.Point(206, 66);
+            this.txtFilter.Location = new System.Drawing.Point(206, 122);
             this.txtFilter.Multiline = true;
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(147, 29);
@@ -66,7 +66,7 @@
             "Name",
             "Title",
             "Genre"});
-            this.cbFilters.Location = new System.Drawing.Point(12, 66);
+            this.cbFilters.Location = new System.Drawing.Point(12, 127);
             this.cbFilters.Name = "cbFilters";
             this.cbFilters.Size = new System.Drawing.Size(153, 24);
             this.cbFilters.TabIndex = 33;
@@ -74,7 +74,7 @@
             // 
             // btnAddNewRecord
             // 
-            this.btnAddNewRecord.Location = new System.Drawing.Point(942, 42);
+            this.btnAddNewRecord.Location = new System.Drawing.Point(942, 81);
             this.btnAddNewRecord.Name = "btnAddNewRecord";
             this.btnAddNewRecord.Size = new System.Drawing.Size(75, 70);
             this.btnAddNewRecord.TabIndex = 32;
@@ -86,7 +86,7 @@
             // 
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCount.Location = new System.Drawing.Point(212, 412);
+            this.lblRecordsCount.Location = new System.Drawing.Point(201, 494);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(49, 29);
             this.lblRecordsCount.TabIndex = 31;
@@ -96,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 412);
+            this.label2.Location = new System.Drawing.Point(7, 494);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 29);
             this.label2.TabIndex = 30;
@@ -108,7 +108,7 @@
             this.dgvRecords.AllowUserToDeleteRows = false;
             this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecords.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvRecords.Location = new System.Drawing.Point(12, 118);
+            this.dgvRecords.Location = new System.Drawing.Point(12, 201);
             this.dgvRecords.Name = "dgvRecords";
             this.dgvRecords.ReadOnly = true;
             this.dgvRecords.RowHeadersWidth = 51;
@@ -129,6 +129,13 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(216, 124);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // showRecordDetailsToolStripMenuItem
+            // 
+            this.showRecordDetailsToolStripMenuItem.Name = "showRecordDetailsToolStripMenuItem";
+            this.showRecordDetailsToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
+            this.showRecordDetailsToolStripMenuItem.Text = "Show Record Details";
+            this.showRecordDetailsToolStripMenuItem.Click += new System.EventHandler(this.showRecordDetailsToolStripMenuItem_Click);
             // 
             // addNewRecordToolStripMenuItem
             // 
@@ -162,7 +169,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(396, 13);
+            this.label1.Location = new System.Drawing.Point(400, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(364, 32);
             this.label1.TabIndex = 28;
@@ -170,7 +177,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(942, 406);
+            this.btnClose.Location = new System.Drawing.Point(942, 488);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 48);
             this.btnClose.TabIndex = 35;
@@ -178,18 +185,11 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // showRecordDetailsToolStripMenuItem
-            // 
-            this.showRecordDetailsToolStripMenuItem.Name = "showRecordDetailsToolStripMenuItem";
-            this.showRecordDetailsToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
-            this.showRecordDetailsToolStripMenuItem.Text = "Show Record Details";
-            this.showRecordDetailsToolStripMenuItem.Click += new System.EventHandler(this.showRecordDetailsToolStripMenuItem_Click);
-            // 
             // frmListBorrowingRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 454);
+            this.ClientSize = new System.Drawing.Size(1232, 548);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.cbFilters);
             this.Controls.Add(this.btnAddNewRecord);

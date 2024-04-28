@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListFines));
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cbFilters = new System.Windows.Forms.ComboBox();
             this.btnAddNewFine = new System.Windows.Forms.Button();
@@ -39,11 +40,13 @@
             this.addNewFineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editFineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteFineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.payFineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.payFineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFines)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFilter
@@ -85,7 +88,7 @@
             // 
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCount.Location = new System.Drawing.Point(197, 404);
+            this.lblRecordsCount.Location = new System.Drawing.Point(202, 470);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(49, 29);
             this.lblRecordsCount.TabIndex = 39;
@@ -95,7 +98,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 404);
+            this.label2.Location = new System.Drawing.Point(7, 470);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 29);
             this.label2.TabIndex = 38;
@@ -107,7 +110,7 @@
             this.dgvFines.AllowUserToDeleteRows = false;
             this.dgvFines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFines.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvFines.Location = new System.Drawing.Point(12, 117);
+            this.dgvFines.Location = new System.Drawing.Point(12, 157);
             this.dgvFines.Name = "dgvFines";
             this.dgvFines.ReadOnly = true;
             this.dgvFines.RowHeadersWidth = 51;
@@ -124,35 +127,42 @@
             this.deleteFineToolStripMenuItem,
             this.payFineToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 100);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // addNewFineToolStripMenuItem
             // 
             this.addNewFineToolStripMenuItem.Name = "addNewFineToolStripMenuItem";
-            this.addNewFineToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewFineToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.addNewFineToolStripMenuItem.Text = "Add New Fine";
             this.addNewFineToolStripMenuItem.Click += new System.EventHandler(this.addNewFineToolStripMenuItem_Click);
             // 
             // editFineToolStripMenuItem
             // 
             this.editFineToolStripMenuItem.Name = "editFineToolStripMenuItem";
-            this.editFineToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editFineToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.editFineToolStripMenuItem.Text = "Edit Fine";
             this.editFineToolStripMenuItem.Click += new System.EventHandler(this.editFineToolStripMenuItem_Click);
             // 
             // deleteFineToolStripMenuItem
             // 
             this.deleteFineToolStripMenuItem.Name = "deleteFineToolStripMenuItem";
-            this.deleteFineToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteFineToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.deleteFineToolStripMenuItem.Text = "Delete Fine";
             this.deleteFineToolStripMenuItem.Click += new System.EventHandler(this.deleteFineToolStripMenuItem_Click);
+            // 
+            // payFineToolStripMenuItem
+            // 
+            this.payFineToolStripMenuItem.Name = "payFineToolStripMenuItem";
+            this.payFineToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.payFineToolStripMenuItem.Text = "Pay Fine";
+            this.payFineToolStripMenuItem.Click += new System.EventHandler(this.payFineToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(358, 21);
+            this.label1.Location = new System.Drawing.Point(400, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 32);
             this.label1.TabIndex = 36;
@@ -160,7 +170,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(942, 404);
+            this.btnClose.Location = new System.Drawing.Point(942, 451);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 48);
             this.btnClose.TabIndex = 43;
@@ -168,18 +178,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // payFineToolStripMenuItem
+            // pictureBox1
             // 
-            this.payFineToolStripMenuItem.Name = "payFineToolStripMenuItem";
-            this.payFineToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.payFineToolStripMenuItem.Text = "Pay Fine";
-            this.payFineToolStripMenuItem.Click += new System.EventHandler(this.payFineToolStripMenuItem_Click);
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(397, 70);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(197, 81);
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
             // 
             // frmListFines
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 466);
+            this.ClientSize = new System.Drawing.Size(1065, 511);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.cbFilters);
             this.Controls.Add(this.btnAddNewFine);
@@ -193,6 +207,7 @@
             this.Load += new System.EventHandler(this.frmListFines_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFines)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +228,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ToolStripMenuItem payFineToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

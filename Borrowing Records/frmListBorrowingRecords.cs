@@ -140,7 +140,7 @@ namespace SimpleLibraryWinForm
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
             object ActualReturnDate = dgvRecords.CurrentRow.Cells[6].Value;
-            returnBookToolStripMenuItem.Enabled = (ActualReturnDate == DBNull.Value);
+            returnBookToolStripMenuItem.Enabled = (ActualReturnDate.ToString() == "");
         }
 
         private void returnBookToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,7 +155,7 @@ namespace SimpleLibraryWinForm
                 MessageBox.Show("Record is not found");
                 return;
             }
-            clsBorrowingRecords.UpdateReturnedCopy(_Record.CopyID);
+            clsBorrowingRecords.UpdateReturnedCopyStatus(_Record.CopyID);
             MessageBox.Show("Copy Returned Successfully", "Succeed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             _Record.SetActualReturnDate();
 

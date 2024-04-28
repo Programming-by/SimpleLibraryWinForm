@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListBooks));
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cbFilters = new System.Windows.Forms.ComboBox();
             this.btnAddNewBook = new System.Windows.Forms.Button();
@@ -36,14 +37,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showBookDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.showBookDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFilter
@@ -73,7 +76,7 @@
             // 
             // btnAddNewBook
             // 
-            this.btnAddNewBook.Location = new System.Drawing.Point(942, 46);
+            this.btnAddNewBook.Location = new System.Drawing.Point(942, 70);
             this.btnAddNewBook.Name = "btnAddNewBook";
             this.btnAddNewBook.Size = new System.Drawing.Size(75, 70);
             this.btnAddNewBook.TabIndex = 15;
@@ -85,7 +88,7 @@
             // 
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCount.Location = new System.Drawing.Point(187, 416);
+            this.lblRecordsCount.Location = new System.Drawing.Point(192, 438);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(49, 29);
             this.lblRecordsCount.TabIndex = 14;
@@ -95,7 +98,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 416);
+            this.label2.Location = new System.Drawing.Point(7, 438);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 29);
             this.label2.TabIndex = 13;
@@ -107,7 +110,7 @@
             this.dgvBooks.AllowUserToDeleteRows = false;
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBooks.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvBooks.Location = new System.Drawing.Point(12, 122);
+            this.dgvBooks.Location = new System.Drawing.Point(12, 151);
             this.dgvBooks.Name = "dgvBooks";
             this.dgvBooks.ReadOnly = true;
             this.dgvBooks.RowHeadersWidth = 51;
@@ -127,24 +130,31 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(203, 100);
             // 
+            // showBookDetailsToolStripMenuItem
+            // 
+            this.showBookDetailsToolStripMenuItem.Name = "showBookDetailsToolStripMenuItem";
+            this.showBookDetailsToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
+            this.showBookDetailsToolStripMenuItem.Text = "Show Book Details";
+            this.showBookDetailsToolStripMenuItem.Click += new System.EventHandler(this.showBookDetailsToolStripMenuItem_Click);
+            // 
             // addNewUserToolStripMenuItem
             // 
             this.addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
-            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.addNewUserToolStripMenuItem.Text = "Add New Book";
             this.addNewUserToolStripMenuItem.Click += new System.EventHandler(this.addNewBookToolStripMenuItem_Click);
             // 
             // editUserToolStripMenuItem
             // 
             this.editUserToolStripMenuItem.Name = "editUserToolStripMenuItem";
-            this.editUserToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editUserToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.editUserToolStripMenuItem.Text = "Edit Book";
             this.editUserToolStripMenuItem.Click += new System.EventHandler(this.editBookToolStripMenuItem_Click);
             // 
             // deleteUserToolStripMenuItem
             // 
             this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.deleteUserToolStripMenuItem.Text = "Delete Book";
             this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteBookToolStripMenuItem_Click);
             // 
@@ -160,7 +170,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(942, 410);
+            this.btnClose.Location = new System.Drawing.Point(942, 432);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 48);
             this.btnClose.TabIndex = 18;
@@ -168,18 +178,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // showBookDetailsToolStripMenuItem
+            // pictureBox1
             // 
-            this.showBookDetailsToolStripMenuItem.Name = "showBookDetailsToolStripMenuItem";
-            this.showBookDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.showBookDetailsToolStripMenuItem.Text = "Show Book Details";
-            this.showBookDetailsToolStripMenuItem.Click += new System.EventHandler(this.showBookDetailsToolStripMenuItem_Click);
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(448, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(197, 81);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // frmListBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 463);
+            this.ClientSize = new System.Drawing.Size(1049, 507);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.cbFilters);
             this.Controls.Add(this.btnAddNewBook);
@@ -193,6 +207,7 @@
             this.Load += new System.EventHandler(this.frmBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +228,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ToolStripMenuItem showBookDetailsToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

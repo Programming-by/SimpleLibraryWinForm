@@ -62,7 +62,7 @@ namespace SimpleLibraryWinForm.BookCopies
             }
             else
             {
-                if (cbFilters.Text == " Availability Status")
+                if (cbFilters.Text == "Availability Status")
                 {
                     txtFilter.Visible = false;
                     cbAvailabilityStatus.Visible = true;
