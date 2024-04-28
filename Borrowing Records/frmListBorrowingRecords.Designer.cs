@@ -49,7 +49,7 @@
             // 
             // txtFilter
             // 
-            this.txtFilter.Location = new System.Drawing.Point(206, 122);
+            this.txtFilter.Location = new System.Drawing.Point(206, 153);
             this.txtFilter.Multiline = true;
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(147, 29);
@@ -66,7 +66,7 @@
             "Name",
             "Title",
             "Genre"});
-            this.cbFilters.Location = new System.Drawing.Point(12, 127);
+            this.cbFilters.Location = new System.Drawing.Point(12, 153);
             this.cbFilters.Name = "cbFilters";
             this.cbFilters.Size = new System.Drawing.Size(153, 24);
             this.cbFilters.TabIndex = 33;
@@ -74,7 +74,7 @@
             // 
             // btnAddNewRecord
             // 
-            this.btnAddNewRecord.Location = new System.Drawing.Point(942, 81);
+            this.btnAddNewRecord.Location = new System.Drawing.Point(942, 112);
             this.btnAddNewRecord.Name = "btnAddNewRecord";
             this.btnAddNewRecord.Size = new System.Drawing.Size(75, 70);
             this.btnAddNewRecord.TabIndex = 32;

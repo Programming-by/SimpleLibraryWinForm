@@ -79,6 +79,21 @@ namespace SimpleLibraryWinForm.Fines
             if (_Mode == enMode.Update)
                 _LoadData();
         }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void _PreventAddingNewFineForTheSameRecord()
+        {
+            clsFines PreviousFine = clsFines.FindByBorrowingRecordID(ctrlBorrowingRecordDetailsWithFilter1.BorrowingRecordID);
+
+            if (PreviousFine != null)
+            {
+                    MessageBox.Show("Cannot Add New Fine for this Record, there is Active Fine Application For this Record", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    btnSave.Enabled = false;
+                    return;
+            }
+        }
         private void CalculateLateDaysAndFineAmount()
         {
              _Record = clsBorrowingRecords.Find(ctrlBorrowingRecordDetailsWithFilter1.BorrowingRecordID);
@@ -98,7 +113,7 @@ namespace SimpleLibraryWinForm.Fines
 
                 if (totalDays <= 0)
                 {
-                    MessageBox.Show("Cannot Add Fine to this Record because its not late");
+                    MessageBox.Show("Cannot Add Fine to this Record Because its Not Late" , "Not Allowed",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                     btnSave.Enabled = false;
                     return;
                 }
@@ -107,25 +122,6 @@ namespace SimpleLibraryWinForm.Fines
             {
                 lblNumberOfLateDays.Text = "0";
                 lblFineAmount.Text = "0";
-                return;
-            }
-        }
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private void _PreventAddingNewFineForTheSameRecord()
-        {
-            _Fine = clsFines.FindByBorrowingRecordID(ctrlBorrowingRecordDetailsWithFilter1.BorrowingRecordID);
-
-            if (_Fine == null)
-            {
-                MessageBox.Show("_Fine is not found");
-                return;
-            }
-            if (!_Fine.PaymentStatus)
-            {
-                MessageBox.Show("Cannot add new Fine for this Record, there is active Fine Application For this Record");
                 return;
             }
         }
@@ -157,6 +153,7 @@ namespace SimpleLibraryWinForm.Fines
                 tbRecordInfo.Enabled = false;
                 tbFineInfo.Enabled = true;
                 tbInfo.SelectedTab = tbInfo.TabPages["tbFineInfo"];
+                _PreventAddingNewFineForTheSameRecord();
                 CalculateLateDaysAndFineAmount();
 
             }
@@ -168,12 +165,11 @@ namespace SimpleLibraryWinForm.Fines
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _PreventAddingNewFineForTheSameRecord();
             _Fine.UserID = ctrlUserDetailsWithFilter1.UserID;
             _Fine.BorrowingRecordID = ctrlBorrowingRecordDetailsWithFilter1.BorrowingRecordID;
             _Fine.NumberOfLateDays = int.Parse(lblNumberOfLateDays.Text);
             _Fine.FineAmount = int.Parse(lblFineAmount.Text);
-            _Fine.PaymentStatus = rbNotPaid.Checked;
+            _Fine.PaymentStatus = rbPaid.Checked ? true : false;
 
             if (_Fine.Save())
             {
