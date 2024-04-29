@@ -1,4 +1,5 @@
-﻿using SimpleLibraryWinForm.BookCopies;
+﻿using SimpleLibraryWinForm.Available_Book_Copies;
+using SimpleLibraryWinForm.BookCopies;
 using SimpleLibraryWinForm.Books;
 using SimpleLibraryWinForm.Fines;
 using SimpleLibraryWinForm.Reservations;
@@ -42,8 +43,6 @@ namespace SimpleLibraryWinForm
 
         private void reservationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListReservations frm = new frmListReservations();
-            frm.ShowDialog();
         }
 
         private void borrowingRecordsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,5 +56,17 @@ namespace SimpleLibraryWinForm
             frmListFines frm = new frmListFines();
             frm.ShowDialog();
         }
+        private void reservationsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmListReservations frm = new frmListReservations();
+            frm.ShowDialog();
+        }
+        private void availableBookCopiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListAvailableBookCopies frm = new frmListAvailableBookCopies();
+
+            frm.ShowDialog();
+        }
+
     }
 }

@@ -35,12 +35,14 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.BookCopiesStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.reservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManageReservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.availableBookCopiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.borrowingRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.finesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenue.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             this.toolStripSeparator1,
             this.BookCopiesStripMenuItem1,
             this.toolStripSeparator2,
-            this.reservationsToolStripMenuItem,
+            this.ManageReservationsToolStripMenuItem,
             this.toolStripSeparator3,
             this.borrowingRecordsToolStripMenuItem,
             this.toolStripSeparator4,
@@ -104,14 +106,25 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(303, 6);
             // 
-            // reservationsToolStripMenuItem
+            // ManageReservationsToolStripMenuItem
             // 
-            this.reservationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reservationsToolStripMenuItem.Image")));
-            this.reservationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.reservationsToolStripMenuItem.Name = "reservationsToolStripMenuItem";
-            this.reservationsToolStripMenuItem.Size = new System.Drawing.Size(306, 54);
-            this.reservationsToolStripMenuItem.Text = "Reservations";
-            this.reservationsToolStripMenuItem.Click += new System.EventHandler(this.reservationsToolStripMenuItem_Click);
+            this.ManageReservationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reservationsToolStripMenuItem,
+            this.availableBookCopiesToolStripMenuItem});
+            this.ManageReservationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ManageReservationsToolStripMenuItem.Image")));
+            this.ManageReservationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ManageReservationsToolStripMenuItem.Name = "ManageReservationsToolStripMenuItem";
+            this.ManageReservationsToolStripMenuItem.Size = new System.Drawing.Size(306, 54);
+            this.ManageReservationsToolStripMenuItem.Text = "Reservations";
+            // 
+            // availableBookCopiesToolStripMenuItem
+            // 
+            this.availableBookCopiesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("availableBookCopiesToolStripMenuItem.Image")));
+            this.availableBookCopiesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.availableBookCopiesToolStripMenuItem.Name = "availableBookCopiesToolStripMenuItem";
+            this.availableBookCopiesToolStripMenuItem.Size = new System.Drawing.Size(336, 54);
+            this.availableBookCopiesToolStripMenuItem.Text = "Available Book Copies";
+            this.availableBookCopiesToolStripMenuItem.Click += new System.EventHandler(this.availableBookCopiesToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -151,6 +164,15 @@
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
+            // reservationsToolStripMenuItem
+            // 
+            this.reservationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reservationsToolStripMenuItem.Image")));
+            this.reservationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.reservationsToolStripMenuItem.Name = "reservationsToolStripMenuItem";
+            this.reservationsToolStripMenuItem.Size = new System.Drawing.Size(336, 54);
+            this.reservationsToolStripMenuItem.Text = "Reservations";
+            this.reservationsToolStripMenuItem.Click += new System.EventHandler(this.reservationsToolStripMenuItem_Click_1);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,11 +199,13 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem ManageBooksStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem reservationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ManageReservationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem borrowingRecordsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem finesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem availableBookCopiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reservationsToolStripMenuItem;
     }
 }
 

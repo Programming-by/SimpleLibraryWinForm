@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Available Book Copies\frmListAvailableBookCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Available Book Copies\frmListAvailableBookCopies.Designer.cs">
+      <DependentUpon>frmListAvailableBookCopies.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookCopies\Controls\ctrlCopyDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     <Compile Include="Users\frmShowUserDetails.Designer.cs">
       <DependentUpon>frmShowUserDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Available Book Copies\frmListAvailableBookCopies.resx">
+      <DependentUpon>frmListAvailableBookCopies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookCopies\Controls\ctrlCopyDetails.resx">
       <DependentUpon>ctrlCopyDetails.cs</DependentUpon>
     </EmbeddedResource>

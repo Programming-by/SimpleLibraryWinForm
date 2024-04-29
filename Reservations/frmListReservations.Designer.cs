@@ -67,7 +67,7 @@
             this.editReservationToolStripMenuItem,
             this.deleteReservationToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(222, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(222, 76);
             // 
             // addNewReservationToolStripMenuItem
             // 
@@ -102,7 +102,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(932, 398);
+            this.btnClose.Location = new System.Drawing.Point(947, 392);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 48);
             this.btnClose.TabIndex = 18;
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 472);
+            this.ClientSize = new System.Drawing.Size(1051, 511);
             this.Controls.Add(this.dgvReservations);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
